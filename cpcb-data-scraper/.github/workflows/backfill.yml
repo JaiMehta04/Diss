@@ -1,0 +1,51 @@
+name: RTWQMS Historical Backfill
+
+on:
+  workflow_dispatch:
+    inputs:
+      station:
+        description: 'Station number (e.g. WB89) — leave blank for all'
+        required: false
+        default: ''
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests
+
+      - name: Run backfill
+        id: backfill
+        continue-on-error: true
+        run: |
+          ARGS="--output-dir data/rtwqms_historical"
+          if [ -n "${{ github.event.inputs.station }}" ]; then
+            ARGS="$ARGS --station ${{ github.event.inputs.station }}"
+          fi
+          python rtwqms_backfill.py $ARGS
+
+      - name: Commit data
+        run: |
+          git config --global user.name  'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/rtwqms_historical/ 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "RTWQMS historical backfill $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Fail job if backfill failed
+        if: steps.backfill.outcome == 'failure'
+        run: exit 1

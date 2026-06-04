@@ -1,0 +1,85 @@
+station_code,station_name,parameters___dissolved_oxygen__mg_l_____criteria__5_0_mg_l_,parameters___faecal_coliform__mpn_100_ml_____criteria__2500_mpn_100_ml_
+Uttarakhand,"Mandakini b/c Alaknanda, Rudraprayag",10.4,1.8
+Uttarakhand,"Alaknanda b/c Mandakini, Rudraprayag",10.2,1.8
+Uttarakhand,"Alkananda a/c Mandakini, Rudraprayag",10.4,1.8
+Uttarakhand,"Bhagirathi b/c Alaknanda, Devprayag",9.9,1.8
+Uttarakhand,"Alaknanda b/c Bhagirathi, Devprayag",9.7,1.8
+Uttarakhand,"Alaknanda a/c Bhagirathi, Devprayag",10,1.8
+Uttarakhand,U/s Rishikesh,10.3,14
+Uttarakhand,"A/c Song Near Satyanarayan Temple, d/s Raiwala",9.9,64
+Uttarakhand,Rishikesh d/s,9.8,13.5
+Uttarakhand,Har-ki- pauri Ghat,9.5,41.5
+Uttarakhand,Haridwar d/s,8.9,79
+Uttarakhand,Roorkee d/s,9.7,63
+Uttar Pradesh,Madhya Ganga Barrage (Bijnor),9.4,790
+Uttar Pradesh,Garhmukteshwar,10.2,350
+Uttar Pradesh,Brijghat Gharmukteshwar,10.7,170
+Uttar Pradesh,U/s Anoopshahar,8.1,920
+Uttar Pradesh,Anoopshahar d/s,8.3,1100
+Uttar Pradesh,Narora (Bulandsahar),8.3,1100
+Uttar Pradesh,Kachhla Ghat (Aligarh),9.6,260
+Uttar Pradesh,Farrukhabad,11,1100
+Uttar Pradesh,U/s Kannauj (Rajghat),10.5,1400
+Uttar Pradesh,Kannauj d/s,9.8,1600
+Uttar Pradesh,Bithoor (Kanpur),11.2,1400
+Uttar Pradesh,U/s Kanpur (Ranighat),10.8,2800
+Uttar Pradesh,Bathing Ghat (Bharaoghat),9.7,2100
+Uttar Pradesh,Shuklaganj d/s,10.6,2700
+Uttar Pradesh,Bathing Ghat (Gola Ghat),10.4,10000
+Uttar Pradesh,Kanpur d/s (Jajmau Pumping Station),10.1,15000
+Uttar Pradesh,Bathing Ghat (Jajmau Bridge),10.3,14000
+Uttar Pradesh,Dalmau (Rai Bareilly),10.45,1350
+Uttar Pradesh,Kala kankar (Rai Bareilly),10.5,1300
+Uttar Pradesh,Prayagraj (Rasoolabad),8.45,1150
+Uttar Pradesh,Kadaghat (Prayagraj),7.8,810
+Uttar Pradesh,Prayagraj d/s (Sangam),7.4,1200
+Uttar Pradesh,A/c Tamsa River (Sirsa),8.4,810
+Uttar Pradesh,"U/s, Vindhyachal (Mirzapur)",8.8,800
+Uttar Pradesh,"D/s, Mirzapur",7.6,12000
+Uttar Pradesh,Chunar,8.4,8000
+Uttar Pradesh,U/s Varanasi (Assighat),8.7,800
+Uttar Pradesh,Varanasi d/s (Malviya Bridge),7.9,11000
+Uttar Pradesh,A/c Gomti River (Bhusaula),8.4,7000
+Uttar Pradesh,Tarighat (Ghazipur),7.6,13000
+Bihar,Buxar,9.75,12450
+Bihar,"U/s Jail Ghat, Buxar (a/c Thora River)",9.1,63500
+Bihar,"Buxar, Ramrekhaghat",8.45,107000
+Bihar,"Buxar d/s, Near Ganga Bridge",7.7,35000
+Bihar,"Arrah-Chapra Road Bridge, u/s Doriganj",9.3,8200
+Bihar,"C/f Sone Doriganj, Chapra",9.3,7900
+Bihar,"Maa Ambika Asthan, Doriganj d/s (Saran)",9,11000
+Bihar,"Danapur, Near Pipapul",9.5,1040
+Bihar,"Khurji, u/s Patna",9.45,26000
+Bihar,Darbhanga Ghat (Patna),7.7,160000
+Bihar,Gulbi Ghat (Patna),7.65,160000
+Bihar,Patna d/s (Ganga Bridge),8.2,92000
+Bihar,Malsalami (Patna),9.05,54000
+Bihar,"Ganga at Kachchi-Dargah-Bidupur Road Bridge, Patna",9.3,35000
+Bihar,Triveni Ghat,8.05,28500
+Bihar,Fatuha,6.15,92000
+Bihar,"Bakhyiyarpur-Tajpur Bridge on Ganga, Athmagola, Patna",9.2,24500
+Bihar,Barh,9.4,23000
+Bihar,Nawadaghat d/s,9.55,19950
+Bihar,U/s Barahpur Bindtoli,9.45,26000
+Bihar,U/s Mokama,9.6,31500
+Bihar,Mokama d/s,9,3050
+Bihar,Barahia,9.05,10450
+Bihar,U/s Munger,9.5,24000
+Bihar,Munger,9.2,44500
+Bihar,U/s Sultanganj,9.45,63500
+Bihar,"Water Intake Point, Bhagalpur",7.95,35000
+Bihar,Sultanganj (Bagalpur),8.85,35000
+Bihar,Champanagar,9,4800
+Bihar,Bhagalpur,9,22000
+Bihar,U/s Bhagalpur,6.8,54000
+Bihar,Kahalgaon,9.5,58000
+Bihar,"Kahalgaon d/s, Near Cremation Ghat",9.25,13150
+Jharkhand,U/s Neara lCT Ghat,7.55,NA
+Jharkhand,Near Janta Ghat d/s,7.55,NA
+Jharkhand,Rajmahal,7.7,NA
+Jharkhand,Sangi Dalan,7.5,NA
+West Bengal,Dakshineshwar,7,79000
+West Bengal,Shivpur (Howrah),7,49000
+West Bengal,Garden Reach,7.1,33000
+West Bengal,Uluberia,7.6,17000
+West Bengal,Diamond Harbour,6.7,6800

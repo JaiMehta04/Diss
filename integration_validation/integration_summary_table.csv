@@ -1,0 +1,5 @@
+Dataset,Stations,Parameters,Records,Year_Range,States,Avg_Trust,Pct_Valid
+cpcb,37,10,36600,2025–2025,6,0.849,99.6%
+data_gov_in,496,23,137938,1963–2022,10,0.642,75.8%
+nwmp_pdf,170,7,732,2015–2024,16,0.688,91.1%
+INTEGRATED,170,7,175270,1963–2025,16,0.685,80.8%

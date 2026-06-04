@@ -1,0 +1,739 @@
+{
+  "total_rows": 93365,
+  "total_stations": 972,
+  "sources": {
+    "cpcb_realtime": {
+      "rows": 75801,
+      "stations": 37,
+      "date_range": [
+        "2025-07-29 09:30:00",
+        "2025-11-05 12:30:00"
+      ],
+      "year_range": [
+        2025,
+        2025
+      ]
+    },
+    "datagov": {
+      "rows": 10700,
+      "stations": 444,
+      "date_range": [
+        "1963-11-01 08:30:00",
+        "2021-12-23 14:41:00"
+      ],
+      "year_range": [
+        1963,
+        2021
+      ]
+    },
+    "nwdp_cpcb": {
+      "rows": 5849,
+      "stations": 108,
+      "date_range": [
+        "2018-01-03 08:30:00",
+        "2021-12-30 08:30:00"
+      ],
+      "year_range": [
+        2018,
+        2021
+      ]
+    },
+    "nwmp_html": {
+      "rows": 155,
+      "stations": 65,
+      "date_range": [
+        "2012-07-01 00:00:00",
+        "2014-07-01 00:00:00"
+      ],
+      "year_range": [
+        2012,
+        2014
+      ]
+    },
+    "nwmp_pdf": {
+      "rows": 860,
+      "stations": 383,
+      "date_range": [
+        "2015-07-01 00:00:00",
+        "2024-07-01 00:00:00"
+      ],
+      "year_range": [
+        2015,
+        2024
+      ]
+    }
+  },
+  "cross_source_comparison": {
+    "Dissolved_Oxygen_mg_l|cpcb_realtime_vs_datagov": {
+      "param": "Dissolved_Oxygen_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 6.877,
+      "mean_2": 6.765,
+      "diff_pct": 1.6
+    },
+    "Dissolved_Oxygen_mg_l|cpcb_realtime_vs_nwmp_html": {
+      "param": "Dissolved_Oxygen_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_html",
+      "mean_1": 6.877,
+      "mean_2": 7.85,
+      "diff_pct": 14.2
+    },
+    "Dissolved_Oxygen_mg_l|cpcb_realtime_vs_nwmp_pdf": {
+      "param": "Dissolved_Oxygen_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_pdf",
+      "mean_1": 6.877,
+      "mean_2": 5.788,
+      "diff_pct": 15.8
+    },
+    "Dissolved_Oxygen_mg_l|datagov_vs_nwmp_html": {
+      "param": "Dissolved_Oxygen_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 6.765,
+      "mean_2": 7.85,
+      "diff_pct": 16.0
+    },
+    "Dissolved_Oxygen_mg_l|datagov_vs_nwmp_pdf": {
+      "param": "Dissolved_Oxygen_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_pdf",
+      "mean_1": 6.765,
+      "mean_2": 5.788,
+      "diff_pct": 14.4
+    },
+    "Dissolved_Oxygen_mg_l|nwmp_html_vs_nwmp_pdf": {
+      "param": "Dissolved_Oxygen_mg_l",
+      "source_1": "nwmp_html",
+      "source_2": "nwmp_pdf",
+      "mean_1": 7.85,
+      "mean_2": 5.788,
+      "diff_pct": 26.3
+    },
+    "BOD_mg_l|cpcb_realtime_vs_datagov": {
+      "param": "BOD_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 3.473,
+      "mean_2": 3.78,
+      "diff_pct": 8.8
+    },
+    "BOD_mg_l|cpcb_realtime_vs_nwdp_cpcb": {
+      "param": "BOD_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwdp_cpcb",
+      "mean_1": 3.473,
+      "mean_2": 2.745,
+      "diff_pct": 21.0
+    },
+    "BOD_mg_l|cpcb_realtime_vs_nwmp_html": {
+      "param": "BOD_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_html",
+      "mean_1": 3.473,
+      "mean_2": 3.005,
+      "diff_pct": 13.5
+    },
+    "BOD_mg_l|cpcb_realtime_vs_nwmp_pdf": {
+      "param": "BOD_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_pdf",
+      "mean_1": 3.473,
+      "mean_2": 3.51,
+      "diff_pct": 1.1
+    },
+    "BOD_mg_l|datagov_vs_nwdp_cpcb": {
+      "param": "BOD_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwdp_cpcb",
+      "mean_1": 3.78,
+      "mean_2": 2.745,
+      "diff_pct": 27.4
+    },
+    "BOD_mg_l|datagov_vs_nwmp_html": {
+      "param": "BOD_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 3.78,
+      "mean_2": 3.005,
+      "diff_pct": 20.5
+    },
+    "BOD_mg_l|datagov_vs_nwmp_pdf": {
+      "param": "BOD_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_pdf",
+      "mean_1": 3.78,
+      "mean_2": 3.51,
+      "diff_pct": 7.1
+    },
+    "BOD_mg_l|nwdp_cpcb_vs_nwmp_html": {
+      "param": "BOD_mg_l",
+      "source_1": "nwdp_cpcb",
+      "source_2": "nwmp_html",
+      "mean_1": 2.745,
+      "mean_2": 3.005,
+      "diff_pct": 9.5
+    },
+    "BOD_mg_l|nwdp_cpcb_vs_nwmp_pdf": {
+      "param": "BOD_mg_l",
+      "source_1": "nwdp_cpcb",
+      "source_2": "nwmp_pdf",
+      "mean_1": 2.745,
+      "mean_2": 3.51,
+      "diff_pct": 27.9
+    },
+    "BOD_mg_l|nwmp_html_vs_nwmp_pdf": {
+      "param": "BOD_mg_l",
+      "source_1": "nwmp_html",
+      "source_2": "nwmp_pdf",
+      "mean_1": 3.005,
+      "mean_2": 3.51,
+      "diff_pct": 16.8
+    },
+    "COD_mg_l|cpcb_realtime_vs_datagov": {
+      "param": "COD_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 16.954,
+      "mean_2": 20.397,
+      "diff_pct": 20.3
+    },
+    "pH|cpcb_realtime_vs_datagov": {
+      "param": "pH",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 7.878,
+      "mean_2": 8.061,
+      "diff_pct": 2.3
+    },
+    "pH|cpcb_realtime_vs_nwmp_html": {
+      "param": "pH",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_html",
+      "mean_1": 7.878,
+      "mean_2": 7.93,
+      "diff_pct": 0.7
+    },
+    "pH|cpcb_realtime_vs_nwmp_pdf": {
+      "param": "pH",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_pdf",
+      "mean_1": 7.878,
+      "mean_2": 7.387,
+      "diff_pct": 6.2
+    },
+    "pH|datagov_vs_nwmp_html": {
+      "param": "pH",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 8.061,
+      "mean_2": 7.93,
+      "diff_pct": 1.6
+    },
+    "pH|datagov_vs_nwmp_pdf": {
+      "param": "pH",
+      "source_1": "datagov",
+      "source_2": "nwmp_pdf",
+      "mean_1": 8.061,
+      "mean_2": 7.387,
+      "diff_pct": 8.4
+    },
+    "pH|nwmp_html_vs_nwmp_pdf": {
+      "param": "pH",
+      "source_1": "nwmp_html",
+      "source_2": "nwmp_pdf",
+      "mean_1": 7.93,
+      "mean_2": 7.387,
+      "diff_pct": 6.9
+    },
+    "Conductivity_uS_cm|cpcb_realtime_vs_datagov": {
+      "param": "Conductivity_uS_cm",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 313.294,
+      "mean_2": 514.391,
+      "diff_pct": 64.2
+    },
+    "Conductivity_uS_cm|cpcb_realtime_vs_nwmp_html": {
+      "param": "Conductivity_uS_cm",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_html",
+      "mean_1": 313.294,
+      "mean_2": 299.901,
+      "diff_pct": 4.3
+    },
+    "Conductivity_uS_cm|datagov_vs_nwmp_html": {
+      "param": "Conductivity_uS_cm",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 514.391,
+      "mean_2": 299.901,
+      "diff_pct": 41.7
+    },
+    "Temperature_C|cpcb_realtime_vs_datagov": {
+      "param": "Temperature_C",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 28.15,
+      "mean_2": 23.818,
+      "diff_pct": 15.4
+    },
+    "Temperature_C|cpcb_realtime_vs_nwmp_html": {
+      "param": "Temperature_C",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_html",
+      "mean_1": 28.15,
+      "mean_2": 23.036,
+      "diff_pct": 18.2
+    },
+    "Temperature_C|cpcb_realtime_vs_nwmp_pdf": {
+      "param": "Temperature_C",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_pdf",
+      "mean_1": 28.15,
+      "mean_2": 12.222,
+      "diff_pct": 56.6
+    },
+    "Temperature_C|datagov_vs_nwmp_html": {
+      "param": "Temperature_C",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 23.818,
+      "mean_2": 23.036,
+      "diff_pct": 3.3
+    },
+    "Temperature_C|datagov_vs_nwmp_pdf": {
+      "param": "Temperature_C",
+      "source_1": "datagov",
+      "source_2": "nwmp_pdf",
+      "mean_1": 23.818,
+      "mean_2": 12.222,
+      "diff_pct": 48.7
+    },
+    "Temperature_C|nwmp_html_vs_nwmp_pdf": {
+      "param": "Temperature_C",
+      "source_1": "nwmp_html",
+      "source_2": "nwmp_pdf",
+      "mean_1": 23.036,
+      "mean_2": 12.222,
+      "diff_pct": 46.9
+    },
+    "Turbidity_NTU|cpcb_realtime_vs_datagov": {
+      "param": "Turbidity_NTU",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 260.93,
+      "mean_2": 38.2,
+      "diff_pct": 85.4
+    },
+    "Nitrate_mg_l|cpcb_realtime_vs_datagov": {
+      "param": "Nitrate_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 1.765,
+      "mean_2": 1.963,
+      "diff_pct": 11.2
+    },
+    "Nitrate_mg_l|cpcb_realtime_vs_nwmp_html": {
+      "param": "Nitrate_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_html",
+      "mean_1": 1.765,
+      "mean_2": 0.551,
+      "diff_pct": 68.8
+    },
+    "Nitrate_mg_l|cpcb_realtime_vs_nwmp_pdf": {
+      "param": "Nitrate_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "nwmp_pdf",
+      "mean_1": 1.765,
+      "mean_2": 0.712,
+      "diff_pct": 59.6
+    },
+    "Nitrate_mg_l|datagov_vs_nwmp_html": {
+      "param": "Nitrate_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 1.963,
+      "mean_2": 0.551,
+      "diff_pct": 71.9
+    },
+    "Nitrate_mg_l|datagov_vs_nwmp_pdf": {
+      "param": "Nitrate_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_pdf",
+      "mean_1": 1.963,
+      "mean_2": 0.712,
+      "diff_pct": 63.7
+    },
+    "Nitrate_mg_l|nwmp_html_vs_nwmp_pdf": {
+      "param": "Nitrate_mg_l",
+      "source_1": "nwmp_html",
+      "source_2": "nwmp_pdf",
+      "mean_1": 0.551,
+      "mean_2": 0.712,
+      "diff_pct": 29.2
+    },
+    "Chloride_mg_l|cpcb_realtime_vs_datagov": {
+      "param": "Chloride_mg_l",
+      "source_1": "cpcb_realtime",
+      "source_2": "datagov",
+      "mean_1": 39.28,
+      "mean_2": 46.15,
+      "diff_pct": 17.5
+    },
+    "Fecal_Coliform_MPN_100ml|datagov_vs_nwdp_cpcb": {
+      "param": "Fecal_Coliform_MPN_100ml",
+      "source_1": "datagov",
+      "source_2": "nwdp_cpcb",
+      "mean_1": 105522.644,
+      "mean_2": 37752.878,
+      "diff_pct": 64.2
+    },
+    "Fecal_Coliform_MPN_100ml|datagov_vs_nwmp_html": {
+      "param": "Fecal_Coliform_MPN_100ml",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 105522.644,
+      "mean_2": 27622.431,
+      "diff_pct": 73.8
+    },
+    "Fecal_Coliform_MPN_100ml|nwdp_cpcb_vs_nwmp_html": {
+      "param": "Fecal_Coliform_MPN_100ml",
+      "source_1": "nwdp_cpcb",
+      "source_2": "nwmp_html",
+      "mean_1": 37752.878,
+      "mean_2": 27622.431,
+      "diff_pct": 26.8
+    },
+    "Total_Coliform_MPN_100ml|datagov_vs_nwdp_cpcb": {
+      "param": "Total_Coliform_MPN_100ml",
+      "source_1": "datagov",
+      "source_2": "nwdp_cpcb",
+      "mean_1": 524692.991,
+      "mean_2": 189996.142,
+      "diff_pct": 63.8
+    },
+    "Total_Coliform_MPN_100ml|datagov_vs_nwmp_html": {
+      "param": "Total_Coliform_MPN_100ml",
+      "source_1": "datagov",
+      "source_2": "nwmp_html",
+      "mean_1": 524692.991,
+      "mean_2": 57756.479,
+      "diff_pct": 89.0
+    },
+    "Total_Coliform_MPN_100ml|nwdp_cpcb_vs_nwmp_html": {
+      "param": "Total_Coliform_MPN_100ml",
+      "source_1": "nwdp_cpcb",
+      "source_2": "nwmp_html",
+      "mean_1": 189996.142,
+      "mean_2": 57756.479,
+      "diff_pct": 69.6
+    },
+    "TDS_mg_l|datagov_vs_nwmp_pdf": {
+      "param": "TDS_mg_l",
+      "source_1": "datagov",
+      "source_2": "nwmp_pdf",
+      "mean_1": 265.717,
+      "mean_2": 666.378,
+      "diff_pct": 150.8
+    }
+  },
+  "parameter_coverage": {
+    "Dissolved_Oxygen_mg_l": {
+      "cpcb_realtime": {
+        "count": 75659,
+        "mean": 6.877
+      },
+      "datagov": {
+        "count": 5270,
+        "mean": 6.765
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 151,
+        "mean": 7.85
+      },
+      "nwmp_pdf": {
+        "count": 780,
+        "mean": 5.788
+      }
+    },
+    "BOD_mg_l": {
+      "cpcb_realtime": {
+        "count": 75449,
+        "mean": 3.473
+      },
+      "datagov": {
+        "count": 1064,
+        "mean": 3.78
+      },
+      "nwdp_cpcb": {
+        "count": 5359,
+        "mean": 2.745
+      },
+      "nwmp_html": {
+        "count": 153,
+        "mean": 3.005
+      },
+      "nwmp_pdf": {
+        "count": 179,
+        "mean": 3.51
+      }
+    },
+    "COD_mg_l": {
+      "cpcb_realtime": {
+        "count": 75681,
+        "mean": 16.954
+      },
+      "datagov": {
+        "count": 2176,
+        "mean": 20.397
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    },
+    "pH": {
+      "cpcb_realtime": {
+        "count": 75229,
+        "mean": 7.878
+      },
+      "datagov": {
+        "count": 9918,
+        "mean": 8.061
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 155,
+        "mean": 7.93
+      },
+      "nwmp_pdf": {
+        "count": 840,
+        "mean": 7.387
+      }
+    },
+    "Conductivity_uS_cm": {
+      "cpcb_realtime": {
+        "count": 75671,
+        "mean": 313.294
+      },
+      "datagov": {
+        "count": 9298,
+        "mean": 514.391
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 141,
+        "mean": 299.901
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    },
+    "Temperature_C": {
+      "cpcb_realtime": {
+        "count": 75658,
+        "mean": 28.15
+      },
+      "datagov": {
+        "count": 8288,
+        "mean": 23.818
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 151,
+        "mean": 23.036
+      },
+      "nwmp_pdf": {
+        "count": 320,
+        "mean": 12.222
+      }
+    },
+    "Turbidity_NTU": {
+      "cpcb_realtime": {
+        "count": 75669,
+        "mean": 260.93
+      },
+      "datagov": {
+        "count": 1440,
+        "mean": 38.2
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    },
+    "Nitrate_mg_l": {
+      "cpcb_realtime": {
+        "count": 75658,
+        "mean": 1.765
+      },
+      "datagov": {
+        "count": 4726,
+        "mean": 1.963
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 143,
+        "mean": 0.551
+      },
+      "nwmp_pdf": {
+        "count": 691,
+        "mean": 0.712
+      }
+    },
+    "Chloride_mg_l": {
+      "cpcb_realtime": {
+        "count": 69755,
+        "mean": 39.28
+      },
+      "datagov": {
+        "count": 9705,
+        "mean": 46.15
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    },
+    "Fecal_Coliform_MPN_100ml": {
+      "cpcb_realtime": {
+        "count": 0,
+        "mean": null
+      },
+      "datagov": {
+        "count": 2201,
+        "mean": 105522.644
+      },
+      "nwdp_cpcb": {
+        "count": 5137,
+        "mean": 37752.878
+      },
+      "nwmp_html": {
+        "count": 130,
+        "mean": 27622.431
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    },
+    "Total_Coliform_MPN_100ml": {
+      "cpcb_realtime": {
+        "count": 0,
+        "mean": null
+      },
+      "datagov": {
+        "count": 1621,
+        "mean": 524692.991
+      },
+      "nwdp_cpcb": {
+        "count": 1482,
+        "mean": 189996.142
+      },
+      "nwmp_html": {
+        "count": 142,
+        "mean": 57756.479
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    },
+    "TDS_mg_l": {
+      "cpcb_realtime": {
+        "count": 0,
+        "mean": null
+      },
+      "datagov": {
+        "count": 4488,
+        "mean": 265.717
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_pdf": {
+        "count": 18,
+        "mean": 666.378
+      }
+    },
+    "TOC_mg_l": {
+      "cpcb_realtime": {
+        "count": 75076,
+        "mean": 6.514
+      },
+      "datagov": {
+        "count": 0,
+        "mean": null
+      },
+      "nwdp_cpcb": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_html": {
+        "count": 0,
+        "mean": null
+      },
+      "nwmp_pdf": {
+        "count": 0,
+        "mean": null
+      }
+    }
+  },
+  "qa_qc": {
+    "rows_in": 101981,
+    "bounds_clipped": "2228",
+    "bod_cod_flagged": 0,
+    "deduped": 8616,
+    "rows_out": 93365
+  }
+}

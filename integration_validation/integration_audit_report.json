@@ -1,0 +1,58 @@
+{
+  "dimensions": {
+    "stations": 170,
+    "states": 16,
+    "parameters": 7,
+    "wide_rows": 14270,
+    "long_records": 175270,
+    "year_range": [
+      1963,
+      2025
+    ]
+  },
+  "sources": {
+    "data_gov_in": 137938,
+    "cpcb": 36600,
+    "nwmp_pdf": 732
+  },
+  "quality_flags": {
+    "valid": 141639,
+    "suspect_consistency": 28267,
+    "suspect_outlier": 5364
+  },
+  "fill_rates": {
+    "ammonia": 31.83601962158374,
+    "arsenic": 1.5557112824106518,
+    "bod": 76.65031534688157,
+    "calcium": 65.7323055360897,
+    "chloride": 89.71969166082691,
+    "cod": 44.29572529782761,
+    "conductivity": 90.73580939032936,
+    "do": 68.88577435178696,
+    "fecal_coliform": 14.358794674141556,
+    "fluoride": 42.880168185003505,
+    "hardness": 67.75052557813595,
+    "iron": 32.99229152067274,
+    "magnesium": 65.75332866152768,
+    "nitrate": 58.983882270497546,
+    "ph": 98.36019621583742,
+    "potassium": 65.2697967764541,
+    "sodium": 62.936229852838125,
+    "sulphate": 61.92011212333567,
+    "tds": 31.296426068675544,
+    "temperature": 82.50875963559916,
+    "toc": 25.85844428871759,
+    "total_coliform": 11.310441485634197,
+    "tss": 0.7988787666433076,
+    "turbidity": 35.851436580238264
+  },
+  "scores": {
+    "station_resolution": 100.0,
+    "spatial_coverage": 93.60896986685354,
+    "quality_valid_pct": 80.81189022650767,
+    "param_fill_avg": 51.17671104882037,
+    "temporal_span": 100,
+    "multi_source_pct": 1.0057471264367817
+  },
+  "overall_score": 71.10055304476974
+}

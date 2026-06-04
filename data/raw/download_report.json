@@ -1,0 +1,27 @@
+{
+  "datagov": {
+    "Water quality of River Ganga - 2012": 66,
+    "River Ganga Water Quality 2011-2015": 10,
+    "Station-wise River Ganga WQ 2018-2020": 93,
+    "State-wise River Ganga WQ Median 2017-2022": 554,
+    "Station-wise River Ganga WQ 2021": 84,
+    "Surface Water Quality March 2018 CPCB": 10000,
+    "Surface Water Quality July 2020 CPCB": 0,
+    "Surface Water Quality UP 1996-2006": 0,
+    "Surface Water Quality UP 1985-1995": 0
+  },
+  "pdf_extraction": {
+    "nwmp_data_BIS_Drinking_Water_Specification.pdf": 0,
+    "nwmp_data_coasteal_water_standards.pdf": 0,
+    "nwmp_data_Designated_Best_Use_Water_Quality_Criteria.pdf": 0,
+    "nwmp_data_Primary_Water_Quality_Criteria.pdf": 0,
+    "NWMP_DATA_2015.pdf": 0,
+    "NWMP_DATA_2018.pdf": 0,
+    "NWMP_DATA_2019.pdf": 0,
+    "NWMP_DATA_2020.pdf": 0,
+    "NWMP_DATA_2021.pdf": 0,
+    "NWMP_DATA_2022.pdf": 0,
+    "NWMP_DATA_2024.pdf": 0
+  },
+  "consolidated": "data\\consolidated\\consolidated_ganga_downloads.csv"
+}

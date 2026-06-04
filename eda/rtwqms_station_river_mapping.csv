@@ -1,0 +1,41 @@
+station_id,station_name,state,river,latitude,longitude,in_training
+11784,WB90_Damodar river Intake well pump house Ramgarh,West Bengal,Damodar,23.645699,85.527719,True
+11812,"JH82_Birsa Pool, Damodar River Bank,Pathardih",Jharkhand,Damodar,23.667,86.411,False
+11814,WB85_Raghunathpur Thermal power plant Intake well.,West Bengal,Damodar,23.6771,86.7425,True
+11783,"WB89_Durgapur barrage, Road Bridge",West Bengal,Damodar,23.4801,87.3049,True
+11811,"BH81_Road Bridge on Gandak, Hajipur",Bihar,Gandak,25.6997,85.1937,False
+11808,"BH78_Road bridge on Burhi Gandak, Khagaria",Bihar,Gandak,25.501,86.4812,False
+11788,"UK55_D/s of Har Ki Pauri, Dam Kothi, Haridwar",Uttarakhand,Ganga,29.94153,78.15757,False
+11787,"UK54_Distributing Canal, Left Bank, Rishikesh",Uttarakhand,Ganga,30.07361,78.2903,False
+11785,"UK51_Abandoned old  bridge, Rudraprayag ",Uttarakhand,Ganga,30.274,78.9607,False
+11802,"UT70_Mawai Dham, Amauli, Fatehpur",Uttar Pradesh,Ganga,25.91217,80.28931,True
+11800,"UT68_Korra Kanak, Asothar, Fatehpur.",Uttar Pradesh,Ganga,25.78,80.5778,True
+11796,"UT64_Fafamau, Lord Curzon Bridge, Allahabad",Uttar Pradesh,Ganga,25.504818,81.866305,True
+11797,"UT65_Balu ghat bridge, Chunar",Uttar Pradesh,Ganga,25.1316,82.8784,True
+11798,"UT66_Ghazipur, Abdul Hameed Setu on River Ganga",Uttar Pradesh,Ganga,25.5868,83.60569,True
+11819,"BH72_River Ganga at Chausa, U/s of Buxar ",Bihar,Ganga,25.5193,83.9007,False
+11805,"BH74_Road bridge on River Ganga, D/s of Buxar",Bihar,Ganga,25.5918,83.9861,False
+11807,"BH77_New Bridge, U/s of Patna city, Khurji",Bihar,Ganga,25.6533,85.0952,False
+11822,"BH75_D/s of Bhagalpur, Road Bridge on River Ganga",Bihar,Ganga,25.30783,87.016618,False
+11813,JH83_Sahebganj,Jharkhand,Ganga,25.2489,87.6417,False
+11820,JH84_Rajmahal at Malgodam,Jharkhand,Ganga,25.0546,87.8381,False
+11815,"WB86_Farakka Barrage, Road Bridge",West Bengal,Ganga,24.801,87.922,True
+11821,"UK52_D/s of Srinagar, Kirtinagar",Uttarakhand,Ganga (Alaknanda),30.214,78.7464,False
+11786,UK53_D/s of Tehri Dam,Uttarakhand,Ganga (Bhagirathi),30.367,78.4794,False
+11816,WB87_Nabadwip Bathing Ghat,West Bengal,Ganga (Hooghly),23.396,88.3626,True
+11804,"BH73_Bridge on Ghagra near Manjhi, Chappra",Bihar,Ghagra,25.8232,84.5858,False
+11790,"UT57_Bridge on Hindon river, Rajnagar Ext.Gzb",Uttar Pradesh,Hindon,28.685751,77.392687,True
+11794,"UT61_Near Galhita on River Hindon,Barnawa,Baghpat",Uttar Pradesh,Hindon,29.114116,77.44042,True
+11817,"WB88_Chinsura , Near Hooghly, Road Bridge",West Bengal,Hooghly,22.9068,88.4039,True
+11791,"UT58_River Kali East, D/s Meerut city, Kaul vill.",Uttar Pradesh,Kali East,28.860677,77.795725,True
+11792,"UT59_River Kali East, D/s of Bulandshahr",Uttar Pradesh,Kali East,28.397028,77.863309,True
+11818,"UT62_River Kosi, D/s of Kashipur, Darhiyal",Uttar Pradesh,Kosi,28.90421,79.011582,True
+11809,"BH79_Road bridge on Kosi, Kursela",Bihar,Kosi,25.4238,87.2336,False
+11806,"BH76_Road bridge at Fathua on Punpun, Patna",Bihar,Punpun,25.51046,85.30732,False
+11803,UT71_Beladandi Bridge on River Ramganga,Uttar Pradesh,Ramganga,28.029453,79.494042,True
+11799,"UT67_Kheerveer Bridge,Kishundaspur Road,Pratapgarh",Uttar Pradesh,Sai/Ganga tributary,25.920256,82.027409,True
+11810,"BH80_Road bridge on Son, Arrah",Bihar,Son,25.5672,84.7961,False
+11793,"UT60_Upstream of Gokul Barrage,D/s of Mathura city",Uttar Pradesh,Yamuna,27.44357,77.71386,True
+11795,"UT63_River Yamuna, U/s to Sangam at Allahabad",Uttar Pradesh,Yamuna,25.42967,81.86069,True
+11801,"UT69_Marhapur, Auraiya",Uttar Pradesh,Yamuna/Ganga tributaries,26.40877,79.4914,True
+11789,"HR56_D/s of Mohana, Sonipat",Haryana,Yamuna/Western drain,28.989211,77.202686,False

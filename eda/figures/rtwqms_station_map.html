@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d97dfa1aad3878256164d9b920bd08b6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; z-index:999;
+     background: white; padding: 12px; border-radius: 8px;
+     box-shadow: 0 2px 6px rgba(0,0,0,0.3); font-size: 13px;
+     font-family: Arial; max-height: 400px; overflow-y: auto;">
+<h4 style="margin:0 0 8px;">RTWQMS Stations — Ganga Basin</h4>
+<p style="margin:2px 0;"><span style="color:green;">●</span> In Training Dataset (21)</p>
+<p style="margin:2px 0;"><span style="color:red;">●</span> Not in Training (19)</p>
+<hr style="margin:5px 0;">
+<p style="margin:2px 0; font-weight:bold;">Rivers:</p>
+<p style="margin:1px 0;"><span style="color:#f57f17;">■</span> Damodar (4)</p>
+<p style="margin:1px 0;"><span style="color:#9c27b0;">■</span> Gandak (2)</p>
+<p style="margin:1px 0;"><span style="color:#1a73e8;">■</span> Ganga (15)</p>
+<p style="margin:1px 0;"><span style="color:#5e97f6;">■</span> Ganga (Alaknanda) (1)</p>
+<p style="margin:1px 0;"><span style="color:#4285f4;">■</span> Ganga (Bhagirathi) (1)</p>
+<p style="margin:1px 0;"><span style="color:#1565c0;">■</span> Ganga (Hooghly) (1)</p>
+<p style="margin:1px 0;"><span style="color:#7b1fa2;">■</span> Ghagra (1)</p>
+<p style="margin:1px 0;"><span style="color:#ff7043;">■</span> Hindon (2)</p>
+<p style="margin:1px 0;"><span style="color:#9e9e9e;">■</span> Hooghly (1)</p>
+<p style="margin:1px 0;"><span style="color:#ff5722;">■</span> Kali East (2)</p>
+<p style="margin:1px 0;"><span style="color:#00897b;">■</span> Kosi (2)</p>
+<p style="margin:1px 0;"><span style="color:#8bc34a;">■</span> Punpun (1)</p>
+<p style="margin:1px 0;"><span style="color:#ff6f00;">■</span> Ramganga (1)</p>
+<p style="margin:1px 0;"><span style="color:#795548;">■</span> Sai/Ganga tributary (1)</p>
+<p style="margin:1px 0;"><span style="color:#558b2f;">■</span> Son (1)</p>
+<p style="margin:1px 0;"><span style="color:#e53935;">■</span> Yamuna (2)</p>
+<p style="margin:1px 0;"><span style="color:#d32f2f;">■</span> Yamuna/Ganga tributaries (1)</p>
+<p style="margin:1px 0;"><span style="color:#c62828;">■</span> Yamuna/Western drain (1)</p>
+</div>
+    
+            <div class="folium-map" id="map_d97dfa1aad3878256164d9b920bd08b6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d97dfa1aad3878256164d9b920bd08b6 = L.map(
+                "map_d97dfa1aad3878256164d9b920bd08b6",
+                {
+                    center: [26.411075725, 82.72241105],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_67ba0c9c9f92b42e7558478bb66450a3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_67ba0c9c9f92b42e7558478bb66450a3.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var tile_layer_28fa7ffaf54f958fc4b4d861e32db471 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_28fa7ffaf54f958fc4b4d861e32db471.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var tile_layer_071aef1def78da2550001ec0cfefb02b = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_071aef1def78da2550001ec0cfefb02b.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d567f5ad9f61a4a5edde103046326e09 = L.marker(
+                [25.5193, 83.9007],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_5a2156865c91a9d12eb2752c09103f7f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c5928ce3cfc5fd88e08b138d5b1c68b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dfb322af2cd5db2a9be2f02ca23f9eb = $(`<div id="html_8dfb322af2cd5db2a9be2f02ca23f9eb" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">BH72</h4>         <p style="margin:2px 0;"><b>River Ganga at Chausa, U/s of Buxar </b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11819</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5193, 83.9007</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_4c5928ce3cfc5fd88e08b138d5b1c68b.setContent(html_8dfb322af2cd5db2a9be2f02ca23f9eb);
+            
+        
+
+        marker_d567f5ad9f61a4a5edde103046326e09.bindPopup(popup_4c5928ce3cfc5fd88e08b138d5b1c68b)
+        ;
+
+        
+    
+    
+            marker_d567f5ad9f61a4a5edde103046326e09.bindTooltip(
+                `<div>
+                     BH72 — Ganga (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d567f5ad9f61a4a5edde103046326e09.setIcon(icon_5a2156865c91a9d12eb2752c09103f7f);
+            
+    
+            var marker_bc89c525413d5b6bd9cc610cf4209994 = L.marker(
+                [25.5918, 83.9861],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_548601d791156abe82cf8c9dbca1c163 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7590ace30646e888660c106cffb4e938 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_44e7830c3ef82cb0fe84c8ce8c66a181 = $(`<div id="html_44e7830c3ef82cb0fe84c8ce8c66a181" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">BH74</h4>         <p style="margin:2px 0;"><b>Road bridge on River Ganga, D/s of Buxar</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11805</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5918, 83.9861</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_7590ace30646e888660c106cffb4e938.setContent(html_44e7830c3ef82cb0fe84c8ce8c66a181);
+            
+        
+
+        marker_bc89c525413d5b6bd9cc610cf4209994.bindPopup(popup_7590ace30646e888660c106cffb4e938)
+        ;
+
+        
+    
+    
+            marker_bc89c525413d5b6bd9cc610cf4209994.bindTooltip(
+                `<div>
+                     BH74 — Ganga (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc89c525413d5b6bd9cc610cf4209994.setIcon(icon_548601d791156abe82cf8c9dbca1c163);
+            
+    
+            var marker_43cced1d490e14053471ebeea851eadf = L.marker(
+                [25.30783, 87.016618],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_0cee043c2da9a1f4412027c4094e6594 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd1cb0b76fab2a5776757682eb9a0bc5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b8839b6fdac8fb6611454b3342816f34 = $(`<div id="html_b8839b6fdac8fb6611454b3342816f34" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">BH75</h4>         <p style="margin:2px 0;"><b>D/s of Bhagalpur, Road Bridge on River Ganga</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11822</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.3078, 87.0166</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_bd1cb0b76fab2a5776757682eb9a0bc5.setContent(html_b8839b6fdac8fb6611454b3342816f34);
+            
+        
+
+        marker_43cced1d490e14053471ebeea851eadf.bindPopup(popup_bd1cb0b76fab2a5776757682eb9a0bc5)
+        ;
+
+        
+    
+    
+            marker_43cced1d490e14053471ebeea851eadf.bindTooltip(
+                `<div>
+                     BH75 — Ganga (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43cced1d490e14053471ebeea851eadf.setIcon(icon_0cee043c2da9a1f4412027c4094e6594);
+            
+    
+            var marker_3f8bc7fd978f62e12e8c3765f6763950 = L.marker(
+                [25.6533, 85.0952],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_12bab095dc267906384947e03b473828 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_59fd85b394e8d652d212520c98f1410a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42f7c58687cac2530f6c1f10f7551ff4 = $(`<div id="html_42f7c58687cac2530f6c1f10f7551ff4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">BH77</h4>         <p style="margin:2px 0;"><b>New Bridge, U/s of Patna city, Khurji</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11807</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.6533, 85.0952</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_59fd85b394e8d652d212520c98f1410a.setContent(html_42f7c58687cac2530f6c1f10f7551ff4);
+            
+        
+
+        marker_3f8bc7fd978f62e12e8c3765f6763950.bindPopup(popup_59fd85b394e8d652d212520c98f1410a)
+        ;
+
+        
+    
+    
+            marker_3f8bc7fd978f62e12e8c3765f6763950.bindTooltip(
+                `<div>
+                     BH77 — Ganga (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f8bc7fd978f62e12e8c3765f6763950.setIcon(icon_12bab095dc267906384947e03b473828);
+            
+    
+            var marker_d21e4d02bdcc61b70c9d5187b4a3d79f = L.marker(
+                [25.2489, 87.6417],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_10da35bb05d498ffd8b0a2c6d0d5881f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98e9b58da962fd4c0e97db3afdec3194 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_30268b01b46d72f10223df02924dc8e5 = $(`<div id="html_30268b01b46d72f10223df02924dc8e5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">JH83</h4>         <p style="margin:2px 0;"><b>Sahebganj</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11813</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Jharkhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.2489, 87.6417</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_98e9b58da962fd4c0e97db3afdec3194.setContent(html_30268b01b46d72f10223df02924dc8e5);
+            
+        
+
+        marker_d21e4d02bdcc61b70c9d5187b4a3d79f.bindPopup(popup_98e9b58da962fd4c0e97db3afdec3194)
+        ;
+
+        
+    
+    
+            marker_d21e4d02bdcc61b70c9d5187b4a3d79f.bindTooltip(
+                `<div>
+                     JH83 — Ganga (Jharkhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d21e4d02bdcc61b70c9d5187b4a3d79f.setIcon(icon_10da35bb05d498ffd8b0a2c6d0d5881f);
+            
+    
+            var marker_ddad4451c5052f1aeaa3dfdd2910ede5 = L.marker(
+                [25.0546, 87.8381],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_08bb441318a8d7f26a80aeccace39f59 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f94a0cb8eb2ab73c488ae3411a708bca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3f2bc3d73decf7deadba88fc1649e69e = $(`<div id="html_3f2bc3d73decf7deadba88fc1649e69e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">JH84</h4>         <p style="margin:2px 0;"><b>Rajmahal at Malgodam</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11820</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Jharkhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.0546, 87.8381</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_f94a0cb8eb2ab73c488ae3411a708bca.setContent(html_3f2bc3d73decf7deadba88fc1649e69e);
+            
+        
+
+        marker_ddad4451c5052f1aeaa3dfdd2910ede5.bindPopup(popup_f94a0cb8eb2ab73c488ae3411a708bca)
+        ;
+
+        
+    
+    
+            marker_ddad4451c5052f1aeaa3dfdd2910ede5.bindTooltip(
+                `<div>
+                     JH84 — Ganga (Jharkhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ddad4451c5052f1aeaa3dfdd2910ede5.setIcon(icon_08bb441318a8d7f26a80aeccace39f59);
+            
+    
+            var marker_62502c25e3e5626e8312ecd4847840fd = L.marker(
+                [30.274, 78.9607],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_3201000ae986873ff8fb0a037a063959 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6dd6e56dd2f493a697940d1d404df8d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_48c79d00337fd57afd438eeda886e969 = $(`<div id="html_48c79d00337fd57afd438eeda886e969" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UK51</h4>         <p style="margin:2px 0;"><b>Abandoned old  bridge, Rudraprayag </b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11785</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttarakhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>30.2740, 78.9607</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_b6dd6e56dd2f493a697940d1d404df8d.setContent(html_48c79d00337fd57afd438eeda886e969);
+            
+        
+
+        marker_62502c25e3e5626e8312ecd4847840fd.bindPopup(popup_b6dd6e56dd2f493a697940d1d404df8d)
+        ;
+
+        
+    
+    
+            marker_62502c25e3e5626e8312ecd4847840fd.bindTooltip(
+                `<div>
+                     UK51 — Ganga (Uttarakhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_62502c25e3e5626e8312ecd4847840fd.setIcon(icon_3201000ae986873ff8fb0a037a063959);
+            
+    
+            var marker_efecedd677c05608eec0398127d0ceeb = L.marker(
+                [30.07361, 78.2903],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_7d03193f64c5dd3fe985ae7618ee9183 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_497a04ee09e1780308280fa0b60753db = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a735d644c8b7bdd2785790b0ab8f206e = $(`<div id="html_a735d644c8b7bdd2785790b0ab8f206e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UK54</h4>         <p style="margin:2px 0;"><b>Distributing Canal, Left Bank, Rishikesh</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11787</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttarakhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>30.0736, 78.2903</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_497a04ee09e1780308280fa0b60753db.setContent(html_a735d644c8b7bdd2785790b0ab8f206e);
+            
+        
+
+        marker_efecedd677c05608eec0398127d0ceeb.bindPopup(popup_497a04ee09e1780308280fa0b60753db)
+        ;
+
+        
+    
+    
+            marker_efecedd677c05608eec0398127d0ceeb.bindTooltip(
+                `<div>
+                     UK54 — Ganga (Uttarakhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_efecedd677c05608eec0398127d0ceeb.setIcon(icon_7d03193f64c5dd3fe985ae7618ee9183);
+            
+    
+            var marker_d678963df2b47072fa1455e4685d1fef = L.marker(
+                [29.94153, 78.15757],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_54bcf3e930a8578071e6ed70c1b23f34 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4883d57c4992dbc03b287f54b4741842 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_238afb67a85b2e7b282a76fea727f22d = $(`<div id="html_238afb67a85b2e7b282a76fea727f22d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UK55</h4>         <p style="margin:2px 0;"><b>D/s of Har Ki Pauri, Dam Kothi, Haridwar</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11788</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttarakhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>29.9415, 78.1576</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_4883d57c4992dbc03b287f54b4741842.setContent(html_238afb67a85b2e7b282a76fea727f22d);
+            
+        
+
+        marker_d678963df2b47072fa1455e4685d1fef.bindPopup(popup_4883d57c4992dbc03b287f54b4741842)
+        ;
+
+        
+    
+    
+            marker_d678963df2b47072fa1455e4685d1fef.bindTooltip(
+                `<div>
+                     UK55 — Ganga (Uttarakhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d678963df2b47072fa1455e4685d1fef.setIcon(icon_54bcf3e930a8578071e6ed70c1b23f34);
+            
+    
+            var marker_929657de5260ebade6ec8db8eee14cd1 = L.marker(
+                [25.504818, 81.866305],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_8898cf301197345997bb37b5c5b11d20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_216364bf230b56ff56e97e26cf3d0f4b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16f6466a1dcb05fc0d43fd73a7340ca3 = $(`<div id="html_16f6466a1dcb05fc0d43fd73a7340ca3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UT64</h4>         <p style="margin:2px 0;"><b>Fafamau, Lord Curzon Bridge, Allahabad</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11796</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5048, 81.8663</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_216364bf230b56ff56e97e26cf3d0f4b.setContent(html_16f6466a1dcb05fc0d43fd73a7340ca3);
+            
+        
+
+        marker_929657de5260ebade6ec8db8eee14cd1.bindPopup(popup_216364bf230b56ff56e97e26cf3d0f4b)
+        ;
+
+        
+    
+    
+            marker_929657de5260ebade6ec8db8eee14cd1.bindTooltip(
+                `<div>
+                     UT64 — Ganga (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_929657de5260ebade6ec8db8eee14cd1.setIcon(icon_8898cf301197345997bb37b5c5b11d20);
+            
+    
+            var marker_1895cda85837da6b6956415db957aeff = L.marker(
+                [25.1316, 82.8784],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_21412fea2e7ed581ec82226687773e79 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dba578f58ffd20deaa7a07faf10d0e67 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e7e6e15b15720dc78c1c26e2a98d535 = $(`<div id="html_9e7e6e15b15720dc78c1c26e2a98d535" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UT65</h4>         <p style="margin:2px 0;"><b>Balu ghat bridge, Chunar</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11797</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.1316, 82.8784</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_dba578f58ffd20deaa7a07faf10d0e67.setContent(html_9e7e6e15b15720dc78c1c26e2a98d535);
+            
+        
+
+        marker_1895cda85837da6b6956415db957aeff.bindPopup(popup_dba578f58ffd20deaa7a07faf10d0e67)
+        ;
+
+        
+    
+    
+            marker_1895cda85837da6b6956415db957aeff.bindTooltip(
+                `<div>
+                     UT65 — Ganga (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1895cda85837da6b6956415db957aeff.setIcon(icon_21412fea2e7ed581ec82226687773e79);
+            
+    
+            var marker_09952f17401dfb05fc83c44d40d2a2b0 = L.marker(
+                [25.5868, 83.60569],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_3e7f7d49fac2524a02146edc4b263e30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7dfbfdb9569d3e0c3c08e319baad433d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9d8d8f1fe04824c2ec117de791eb3c70 = $(`<div id="html_9d8d8f1fe04824c2ec117de791eb3c70" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UT66</h4>         <p style="margin:2px 0;"><b>Ghazipur, Abdul Hameed Setu on River Ganga</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11798</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5868, 83.6057</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_7dfbfdb9569d3e0c3c08e319baad433d.setContent(html_9d8d8f1fe04824c2ec117de791eb3c70);
+            
+        
+
+        marker_09952f17401dfb05fc83c44d40d2a2b0.bindPopup(popup_7dfbfdb9569d3e0c3c08e319baad433d)
+        ;
+
+        
+    
+    
+            marker_09952f17401dfb05fc83c44d40d2a2b0.bindTooltip(
+                `<div>
+                     UT66 — Ganga (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09952f17401dfb05fc83c44d40d2a2b0.setIcon(icon_3e7f7d49fac2524a02146edc4b263e30);
+            
+    
+            var marker_6a2bf3aedb3ee74ac0bb9e92f1ee1d41 = L.marker(
+                [25.78, 80.5778],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_ad939de253d3a07eb6b64b8ae9e65113 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9b1c7cf3744aadabe7936c31237c372 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b3c46105e1b34e05b14ba7600c363c36 = $(`<div id="html_b3c46105e1b34e05b14ba7600c363c36" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UT68</h4>         <p style="margin:2px 0;"><b>Korra Kanak, Asothar, Fatehpur.</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11800</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.7800, 80.5778</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_e9b1c7cf3744aadabe7936c31237c372.setContent(html_b3c46105e1b34e05b14ba7600c363c36);
+            
+        
+
+        marker_6a2bf3aedb3ee74ac0bb9e92f1ee1d41.bindPopup(popup_e9b1c7cf3744aadabe7936c31237c372)
+        ;
+
+        
+    
+    
+            marker_6a2bf3aedb3ee74ac0bb9e92f1ee1d41.bindTooltip(
+                `<div>
+                     UT68 — Ganga (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a2bf3aedb3ee74ac0bb9e92f1ee1d41.setIcon(icon_ad939de253d3a07eb6b64b8ae9e65113);
+            
+    
+            var marker_1b887fa02ae46d2902123627af37e8e4 = L.marker(
+                [25.91217, 80.28931],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_1a368f456a6add4cf4de5d02cf2e04a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d2e42f84e567fa9492713b7756fab17 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_28858c8542111d3f9821d388704905e1 = $(`<div id="html_28858c8542111d3f9821d388704905e1" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">UT70</h4>         <p style="margin:2px 0;"><b>Mawai Dham, Amauli, Fatehpur</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11802</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.9122, 80.2893</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_2d2e42f84e567fa9492713b7756fab17.setContent(html_28858c8542111d3f9821d388704905e1);
+            
+        
+
+        marker_1b887fa02ae46d2902123627af37e8e4.bindPopup(popup_2d2e42f84e567fa9492713b7756fab17)
+        ;
+
+        
+    
+    
+            marker_1b887fa02ae46d2902123627af37e8e4.bindTooltip(
+                `<div>
+                     UT70 — Ganga (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b887fa02ae46d2902123627af37e8e4.setIcon(icon_1a368f456a6add4cf4de5d02cf2e04a7);
+            
+    
+            var marker_b4b50df5e0c1122fbe0162c195777b5f = L.marker(
+                [24.801, 87.922],
+                {
+}
+            ).addTo(feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48);
+        
+    
+            var icon_19701e5288a7fa69a43b306dc7a314e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b9b9acef047b0519be18538562b2c1fe = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0f31bece7cb445085ae18fb7a72406df = $(`<div id="html_0f31bece7cb445085ae18fb7a72406df" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1a73e8;">WB86</h4>         <p style="margin:2px 0;"><b>Farakka Barrage, Road Bridge</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11815</td></tr>             <tr><td><b>River:</b></td><td style="color:#1a73e8;font-weight:bold;">Ganga</td></tr>             <tr><td><b>State:</b></td><td>West Bengal</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>24.8010, 87.9220</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_b9b9acef047b0519be18538562b2c1fe.setContent(html_0f31bece7cb445085ae18fb7a72406df);
+            
+        
+
+        marker_b4b50df5e0c1122fbe0162c195777b5f.bindPopup(popup_b9b9acef047b0519be18538562b2c1fe)
+        ;
+
+        
+    
+    
+            marker_b4b50df5e0c1122fbe0162c195777b5f.bindTooltip(
+                `<div>
+                     WB86 — Ganga (West Bengal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b4b50df5e0c1122fbe0162c195777b5f.setIcon(icon_19701e5288a7fa69a43b306dc7a314e1);
+            
+    
+            feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_b271999064cc91ea4cc9ed4e007905ee = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_fdb50168f4951785c0dcec28ff31cd48 = L.marker(
+                [25.8232, 84.5858],
+                {
+}
+            ).addTo(feature_group_b271999064cc91ea4cc9ed4e007905ee);
+        
+    
+            var icon_b1e946e61b39c1b455401b2f3ceef436 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43f69e8a88c7ac900625857971ce422f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d4cd6c09f32d0d850f92b0ddd2d5d33 = $(`<div id="html_8d4cd6c09f32d0d850f92b0ddd2d5d33" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #7b1fa2;">BH73</h4>         <p style="margin:2px 0;"><b>Bridge on Ghagra near Manjhi, Chappra</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11804</td></tr>             <tr><td><b>River:</b></td><td style="color:#7b1fa2;font-weight:bold;">Ghagra</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.8232, 84.5858</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_43f69e8a88c7ac900625857971ce422f.setContent(html_8d4cd6c09f32d0d850f92b0ddd2d5d33);
+            
+        
+
+        marker_fdb50168f4951785c0dcec28ff31cd48.bindPopup(popup_43f69e8a88c7ac900625857971ce422f)
+        ;
+
+        
+    
+    
+            marker_fdb50168f4951785c0dcec28ff31cd48.bindTooltip(
+                `<div>
+                     BH73 — Ghagra (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdb50168f4951785c0dcec28ff31cd48.setIcon(icon_b1e946e61b39c1b455401b2f3ceef436);
+            
+    
+            feature_group_b271999064cc91ea4cc9ed4e007905ee.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_b9ea11ef7cd1f2e4043ee889db714e54 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_a4d06671a91b64a620eba9316a989f18 = L.marker(
+                [25.51046, 85.30732],
+                {
+}
+            ).addTo(feature_group_b9ea11ef7cd1f2e4043ee889db714e54);
+        
+    
+            var icon_2d8221d324e1d830cfbbe8ef4dd315fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cad2f5327599c267d1868e8ad6ae21d2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1e78ec39c88fb3e0b2a6ddae74f45667 = $(`<div id="html_1e78ec39c88fb3e0b2a6ddae74f45667" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #8bc34a;">BH76</h4>         <p style="margin:2px 0;"><b>Road bridge at Fathua on Punpun, Patna</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11806</td></tr>             <tr><td><b>River:</b></td><td style="color:#8bc34a;font-weight:bold;">Punpun</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5105, 85.3073</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_cad2f5327599c267d1868e8ad6ae21d2.setContent(html_1e78ec39c88fb3e0b2a6ddae74f45667);
+            
+        
+
+        marker_a4d06671a91b64a620eba9316a989f18.bindPopup(popup_cad2f5327599c267d1868e8ad6ae21d2)
+        ;
+
+        
+    
+    
+            marker_a4d06671a91b64a620eba9316a989f18.bindTooltip(
+                `<div>
+                     BH76 — Punpun (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4d06671a91b64a620eba9316a989f18.setIcon(icon_2d8221d324e1d830cfbbe8ef4dd315fd);
+            
+    
+            feature_group_b9ea11ef7cd1f2e4043ee889db714e54.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_fba7858b17924002434a5ee2d93aa4fe = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_08524bbb2fc8d5d71d0b8c086da8a98d = L.marker(
+                [25.501, 86.4812],
+                {
+}
+            ).addTo(feature_group_fba7858b17924002434a5ee2d93aa4fe);
+        
+    
+            var icon_4c615384013654aad1bc980841e64046 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb2a82277784796024ea487c7f71ed78 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8de4f4939626b8ee824701655c88e5b7 = $(`<div id="html_8de4f4939626b8ee824701655c88e5b7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #9c27b0;">BH78</h4>         <p style="margin:2px 0;"><b>Road bridge on Burhi Gandak, Khagaria</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11808</td></tr>             <tr><td><b>River:</b></td><td style="color:#9c27b0;font-weight:bold;">Gandak</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5010, 86.4812</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_fb2a82277784796024ea487c7f71ed78.setContent(html_8de4f4939626b8ee824701655c88e5b7);
+            
+        
+
+        marker_08524bbb2fc8d5d71d0b8c086da8a98d.bindPopup(popup_fb2a82277784796024ea487c7f71ed78)
+        ;
+
+        
+    
+    
+            marker_08524bbb2fc8d5d71d0b8c086da8a98d.bindTooltip(
+                `<div>
+                     BH78 — Gandak (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08524bbb2fc8d5d71d0b8c086da8a98d.setIcon(icon_4c615384013654aad1bc980841e64046);
+            
+    
+            var marker_d2ac530e4d21e9fbcaa7cb0f00573ebe = L.marker(
+                [25.6997, 85.1937],
+                {
+}
+            ).addTo(feature_group_fba7858b17924002434a5ee2d93aa4fe);
+        
+    
+            var icon_f1b48aa5527a7554f62e9a0020b740bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7863a9670d3de06c01d1e5cdf376207e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_339845d1b8a76ddc158d39611cf5eaf4 = $(`<div id="html_339845d1b8a76ddc158d39611cf5eaf4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #9c27b0;">BH81</h4>         <p style="margin:2px 0;"><b>Road Bridge on Gandak, Hajipur</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11811</td></tr>             <tr><td><b>River:</b></td><td style="color:#9c27b0;font-weight:bold;">Gandak</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.6997, 85.1937</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_7863a9670d3de06c01d1e5cdf376207e.setContent(html_339845d1b8a76ddc158d39611cf5eaf4);
+            
+        
+
+        marker_d2ac530e4d21e9fbcaa7cb0f00573ebe.bindPopup(popup_7863a9670d3de06c01d1e5cdf376207e)
+        ;
+
+        
+    
+    
+            marker_d2ac530e4d21e9fbcaa7cb0f00573ebe.bindTooltip(
+                `<div>
+                     BH81 — Gandak (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d2ac530e4d21e9fbcaa7cb0f00573ebe.setIcon(icon_f1b48aa5527a7554f62e9a0020b740bb);
+            
+    
+            feature_group_fba7858b17924002434a5ee2d93aa4fe.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_49d3ad9a97eebf0af3aeac965b08f062 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_bf08c09e756769f89282da8588f8be6e = L.marker(
+                [25.4238, 87.2336],
+                {
+}
+            ).addTo(feature_group_49d3ad9a97eebf0af3aeac965b08f062);
+        
+    
+            var icon_566a04e3a1aa7d640ac830a6871dcf97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fc57ddf334e37f6185163536ecfef99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0a9d835c3a50d7efba8b14726df0c15b = $(`<div id="html_0a9d835c3a50d7efba8b14726df0c15b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #00897b;">BH79</h4>         <p style="margin:2px 0;"><b>Road bridge on Kosi, Kursela</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11809</td></tr>             <tr><td><b>River:</b></td><td style="color:#00897b;font-weight:bold;">Kosi</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.4238, 87.2336</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_5fc57ddf334e37f6185163536ecfef99.setContent(html_0a9d835c3a50d7efba8b14726df0c15b);
+            
+        
+
+        marker_bf08c09e756769f89282da8588f8be6e.bindPopup(popup_5fc57ddf334e37f6185163536ecfef99)
+        ;
+
+        
+    
+    
+            marker_bf08c09e756769f89282da8588f8be6e.bindTooltip(
+                `<div>
+                     BH79 — Kosi (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf08c09e756769f89282da8588f8be6e.setIcon(icon_566a04e3a1aa7d640ac830a6871dcf97);
+            
+    
+            var marker_95309cb6a8aa2993ff0bdea113de636d = L.marker(
+                [28.90421, 79.011582],
+                {
+}
+            ).addTo(feature_group_49d3ad9a97eebf0af3aeac965b08f062);
+        
+    
+            var icon_7ec7c0a1b9c94de00ad6e7f46dd697f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94c251baeebce68a81d99722e546f117 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_76ac85df6690f6853ad6cb22b49eca4f = $(`<div id="html_76ac85df6690f6853ad6cb22b49eca4f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #00897b;">UT62</h4>         <p style="margin:2px 0;"><b>River Kosi, D/s of Kashipur, Darhiyal</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11818</td></tr>             <tr><td><b>River:</b></td><td style="color:#00897b;font-weight:bold;">Kosi</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>28.9042, 79.0116</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_94c251baeebce68a81d99722e546f117.setContent(html_76ac85df6690f6853ad6cb22b49eca4f);
+            
+        
+
+        marker_95309cb6a8aa2993ff0bdea113de636d.bindPopup(popup_94c251baeebce68a81d99722e546f117)
+        ;
+
+        
+    
+    
+            marker_95309cb6a8aa2993ff0bdea113de636d.bindTooltip(
+                `<div>
+                     UT62 — Kosi (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_95309cb6a8aa2993ff0bdea113de636d.setIcon(icon_7ec7c0a1b9c94de00ad6e7f46dd697f9);
+            
+    
+            feature_group_49d3ad9a97eebf0af3aeac965b08f062.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_f08be3865f9e4c6384d36bcacbe9251b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_3d3a80a9fac6eef079bdf5abb030df5c = L.marker(
+                [25.5672, 84.7961],
+                {
+}
+            ).addTo(feature_group_f08be3865f9e4c6384d36bcacbe9251b);
+        
+    
+            var icon_48c75f590378a2282013cda3b0e20418 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29d093aa060060941f26839e56b55a2b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0b7ef78894f264bb387484b5cd766d85 = $(`<div id="html_0b7ef78894f264bb387484b5cd766d85" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #558b2f;">BH80</h4>         <p style="margin:2px 0;"><b>Road bridge on Son, Arrah</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11810</td></tr>             <tr><td><b>River:</b></td><td style="color:#558b2f;font-weight:bold;">Son</td></tr>             <tr><td><b>State:</b></td><td>Bihar</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.5672, 84.7961</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_29d093aa060060941f26839e56b55a2b.setContent(html_0b7ef78894f264bb387484b5cd766d85);
+            
+        
+
+        marker_3d3a80a9fac6eef079bdf5abb030df5c.bindPopup(popup_29d093aa060060941f26839e56b55a2b)
+        ;
+
+        
+    
+    
+            marker_3d3a80a9fac6eef079bdf5abb030df5c.bindTooltip(
+                `<div>
+                     BH80 — Son (Bihar)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d3a80a9fac6eef079bdf5abb030df5c.setIcon(icon_48c75f590378a2282013cda3b0e20418);
+            
+    
+            feature_group_f08be3865f9e4c6384d36bcacbe9251b.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_3f0ea18ba2cd687d932e1cba06e3e95e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_369e006af207453677062f5c941af4ca = L.marker(
+                [28.989211, 77.202686],
+                {
+}
+            ).addTo(feature_group_3f0ea18ba2cd687d932e1cba06e3e95e);
+        
+    
+            var icon_5cdfdfd18850d33f06c4c5247b132764 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf707b086e2a91b5c46be9aa43e21399 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2490f1cec79e916fc44c3b39b67a8b05 = $(`<div id="html_2490f1cec79e916fc44c3b39b67a8b05" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #c62828;">HR56</h4>         <p style="margin:2px 0;"><b>D/s of Mohana, Sonipat</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11789</td></tr>             <tr><td><b>River:</b></td><td style="color:#c62828;font-weight:bold;">Yamuna/Western drain</td></tr>             <tr><td><b>State:</b></td><td>Haryana</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>28.9892, 77.2027</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_cf707b086e2a91b5c46be9aa43e21399.setContent(html_2490f1cec79e916fc44c3b39b67a8b05);
+            
+        
+
+        marker_369e006af207453677062f5c941af4ca.bindPopup(popup_cf707b086e2a91b5c46be9aa43e21399)
+        ;
+
+        
+    
+    
+            marker_369e006af207453677062f5c941af4ca.bindTooltip(
+                `<div>
+                     HR56 — Yamuna/Western drain (Haryana)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_369e006af207453677062f5c941af4ca.setIcon(icon_5cdfdfd18850d33f06c4c5247b132764);
+            
+    
+            feature_group_3f0ea18ba2cd687d932e1cba06e3e95e.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_5ec3133bb3356b7b7741cae836ac3788 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_bddb780564d9903fcc64fabf8e889e06 = L.marker(
+                [23.667, 86.411],
+                {
+}
+            ).addTo(feature_group_5ec3133bb3356b7b7741cae836ac3788);
+        
+    
+            var icon_c17f6c5e0870fcb969d20c4b56b60df1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1483f113db9b7b4a5ace2cbaac6cd95c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_350be776db7f1cf60b563bdedccc5bee = $(`<div id="html_350be776db7f1cf60b563bdedccc5bee" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #f57f17;">JH82</h4>         <p style="margin:2px 0;"><b>Birsa Pool, Damodar River Bank,Pathardih</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11812</td></tr>             <tr><td><b>River:</b></td><td style="color:#f57f17;font-weight:bold;">Damodar</td></tr>             <tr><td><b>State:</b></td><td>Jharkhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>23.6670, 86.4110</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_1483f113db9b7b4a5ace2cbaac6cd95c.setContent(html_350be776db7f1cf60b563bdedccc5bee);
+            
+        
+
+        marker_bddb780564d9903fcc64fabf8e889e06.bindPopup(popup_1483f113db9b7b4a5ace2cbaac6cd95c)
+        ;
+
+        
+    
+    
+            marker_bddb780564d9903fcc64fabf8e889e06.bindTooltip(
+                `<div>
+                     JH82 — Damodar (Jharkhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bddb780564d9903fcc64fabf8e889e06.setIcon(icon_c17f6c5e0870fcb969d20c4b56b60df1);
+            
+    
+            var marker_72b82c12611c50289bfce8b088ac3958 = L.marker(
+                [23.6771, 86.7425],
+                {
+}
+            ).addTo(feature_group_5ec3133bb3356b7b7741cae836ac3788);
+        
+    
+            var icon_cd354b7b87c8d7e924a4fb039725b508 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c32c0fba298d2e9ffdafc44a890ee607 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f852fc389c222c18c365187748f8b3cc = $(`<div id="html_f852fc389c222c18c365187748f8b3cc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #f57f17;">WB85</h4>         <p style="margin:2px 0;"><b>Raghunathpur Thermal power plant Intake well.</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11814</td></tr>             <tr><td><b>River:</b></td><td style="color:#f57f17;font-weight:bold;">Damodar</td></tr>             <tr><td><b>State:</b></td><td>West Bengal</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>23.6771, 86.7425</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_c32c0fba298d2e9ffdafc44a890ee607.setContent(html_f852fc389c222c18c365187748f8b3cc);
+            
+        
+
+        marker_72b82c12611c50289bfce8b088ac3958.bindPopup(popup_c32c0fba298d2e9ffdafc44a890ee607)
+        ;
+
+        
+    
+    
+            marker_72b82c12611c50289bfce8b088ac3958.bindTooltip(
+                `<div>
+                     WB85 — Damodar (West Bengal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_72b82c12611c50289bfce8b088ac3958.setIcon(icon_cd354b7b87c8d7e924a4fb039725b508);
+            
+    
+            var marker_86108e227d5ae5cbea7622f0bc64e475 = L.marker(
+                [23.4801, 87.3049],
+                {
+}
+            ).addTo(feature_group_5ec3133bb3356b7b7741cae836ac3788);
+        
+    
+            var icon_fe8764118aa3b2c6ea4377f54701899b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c65979486eb0f8d266b7e6c2b8e68e0d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_02c3c8a437028f44d9f2de27d2b5242c = $(`<div id="html_02c3c8a437028f44d9f2de27d2b5242c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #f57f17;">WB89</h4>         <p style="margin:2px 0;"><b>Durgapur barrage, Road Bridge</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11783</td></tr>             <tr><td><b>River:</b></td><td style="color:#f57f17;font-weight:bold;">Damodar</td></tr>             <tr><td><b>State:</b></td><td>West Bengal</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>23.4801, 87.3049</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_c65979486eb0f8d266b7e6c2b8e68e0d.setContent(html_02c3c8a437028f44d9f2de27d2b5242c);
+            
+        
+
+        marker_86108e227d5ae5cbea7622f0bc64e475.bindPopup(popup_c65979486eb0f8d266b7e6c2b8e68e0d)
+        ;
+
+        
+    
+    
+            marker_86108e227d5ae5cbea7622f0bc64e475.bindTooltip(
+                `<div>
+                     WB89 — Damodar (West Bengal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86108e227d5ae5cbea7622f0bc64e475.setIcon(icon_fe8764118aa3b2c6ea4377f54701899b);
+            
+    
+            var marker_8ef836b026b7fbcb5b88aba8e35097f8 = L.marker(
+                [23.645699, 85.527719],
+                {
+}
+            ).addTo(feature_group_5ec3133bb3356b7b7741cae836ac3788);
+        
+    
+            var icon_e7a6199bdd3775dfa10a8755eb808c6c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5aa7975aaaa3b861399cf71014f4821c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c5a10ebe88225108af5ceecbd85c0ed0 = $(`<div id="html_c5a10ebe88225108af5ceecbd85c0ed0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #f57f17;">WB90</h4>         <p style="margin:2px 0;"><b>Damodar river Intake well pump house Ramgarh</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11784</td></tr>             <tr><td><b>River:</b></td><td style="color:#f57f17;font-weight:bold;">Damodar</td></tr>             <tr><td><b>State:</b></td><td>West Bengal</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>23.6457, 85.5277</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_5aa7975aaaa3b861399cf71014f4821c.setContent(html_c5a10ebe88225108af5ceecbd85c0ed0);
+            
+        
+
+        marker_8ef836b026b7fbcb5b88aba8e35097f8.bindPopup(popup_5aa7975aaaa3b861399cf71014f4821c)
+        ;
+
+        
+    
+    
+            marker_8ef836b026b7fbcb5b88aba8e35097f8.bindTooltip(
+                `<div>
+                     WB90 — Damodar (West Bengal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8ef836b026b7fbcb5b88aba8e35097f8.setIcon(icon_e7a6199bdd3775dfa10a8755eb808c6c);
+            
+    
+            feature_group_5ec3133bb3356b7b7741cae836ac3788.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_fbc91ece905da37d51657cc886aae295 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f7a9972aeb7fcbb066b5e59551cda7c1 = L.marker(
+                [30.214, 78.7464],
+                {
+}
+            ).addTo(feature_group_fbc91ece905da37d51657cc886aae295);
+        
+    
+            var icon_ab76d47eb0b0708022f03fae043e97fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e2e34f560bb162ca800833615b799f1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9da7efa997a2a7c1c4c94d17d5d17e25 = $(`<div id="html_9da7efa997a2a7c1c4c94d17d5d17e25" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #5e97f6;">UK52</h4>         <p style="margin:2px 0;"><b>D/s of Srinagar, Kirtinagar</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11821</td></tr>             <tr><td><b>River:</b></td><td style="color:#5e97f6;font-weight:bold;">Ganga (Alaknanda)</td></tr>             <tr><td><b>State:</b></td><td>Uttarakhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>30.2140, 78.7464</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_7e2e34f560bb162ca800833615b799f1.setContent(html_9da7efa997a2a7c1c4c94d17d5d17e25);
+            
+        
+
+        marker_f7a9972aeb7fcbb066b5e59551cda7c1.bindPopup(popup_7e2e34f560bb162ca800833615b799f1)
+        ;
+
+        
+    
+    
+            marker_f7a9972aeb7fcbb066b5e59551cda7c1.bindTooltip(
+                `<div>
+                     UK52 — Ganga (Alaknanda) (Uttarakhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7a9972aeb7fcbb066b5e59551cda7c1.setIcon(icon_ab76d47eb0b0708022f03fae043e97fe);
+            
+    
+            feature_group_fbc91ece905da37d51657cc886aae295.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_e4b57287b5bc9895d905fed6cefc724f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_9c56bbde76fe2578107c1a08547f16a2 = L.marker(
+                [30.367, 78.4794],
+                {
+}
+            ).addTo(feature_group_e4b57287b5bc9895d905fed6cefc724f);
+        
+    
+            var icon_1a487b5761a6c92946bc2f3ddfcf122b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e83ced86356b177abe346f17f695c921 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fc12f58f26621685ffefb889dae7b365 = $(`<div id="html_fc12f58f26621685ffefb889dae7b365" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #4285f4;">UK53</h4>         <p style="margin:2px 0;"><b>D/s of Tehri Dam</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11786</td></tr>             <tr><td><b>River:</b></td><td style="color:#4285f4;font-weight:bold;">Ganga (Bhagirathi)</td></tr>             <tr><td><b>State:</b></td><td>Uttarakhand</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>30.3670, 78.4794</td></tr>             <tr><td><b>In Training:</b></td><td>❌ No</td></tr>         </table>     </div>     </div>`)[0];
+                popup_e83ced86356b177abe346f17f695c921.setContent(html_fc12f58f26621685ffefb889dae7b365);
+            
+        
+
+        marker_9c56bbde76fe2578107c1a08547f16a2.bindPopup(popup_e83ced86356b177abe346f17f695c921)
+        ;
+
+        
+    
+    
+            marker_9c56bbde76fe2578107c1a08547f16a2.bindTooltip(
+                `<div>
+                     UK53 — Ganga (Bhagirathi) (Uttarakhand)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c56bbde76fe2578107c1a08547f16a2.setIcon(icon_1a487b5761a6c92946bc2f3ddfcf122b);
+            
+    
+            feature_group_e4b57287b5bc9895d905fed6cefc724f.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_861f762c7f2d5e5917dfb57f1279faed = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_04a93df7d98be673d6f3d491699e8c51 = L.marker(
+                [28.685751, 77.392687],
+                {
+}
+            ).addTo(feature_group_861f762c7f2d5e5917dfb57f1279faed);
+        
+    
+            var icon_fb9bb799e3ddbfb27ad044ed92b0bf22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6fe0224ea411972aa4f1112bad1c0c36 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_88a648c3f3a357b5fc075795ed594995 = $(`<div id="html_88a648c3f3a357b5fc075795ed594995" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #ff7043;">UT57</h4>         <p style="margin:2px 0;"><b>Bridge on Hindon river, Rajnagar Ext.Gzb</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11790</td></tr>             <tr><td><b>River:</b></td><td style="color:#ff7043;font-weight:bold;">Hindon</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>28.6858, 77.3927</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_6fe0224ea411972aa4f1112bad1c0c36.setContent(html_88a648c3f3a357b5fc075795ed594995);
+            
+        
+
+        marker_04a93df7d98be673d6f3d491699e8c51.bindPopup(popup_6fe0224ea411972aa4f1112bad1c0c36)
+        ;
+
+        
+    
+    
+            marker_04a93df7d98be673d6f3d491699e8c51.bindTooltip(
+                `<div>
+                     UT57 — Hindon (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_04a93df7d98be673d6f3d491699e8c51.setIcon(icon_fb9bb799e3ddbfb27ad044ed92b0bf22);
+            
+    
+            var marker_de9ef57026f0cc3943dd51cb491ee496 = L.marker(
+                [29.114116, 77.44042],
+                {
+}
+            ).addTo(feature_group_861f762c7f2d5e5917dfb57f1279faed);
+        
+    
+            var icon_7377523b829d42ed009d4ec53bb88491 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ff8da063843f45bf9c686a4507af7af = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_114b395495a2cd381cc9e1299aaafcb5 = $(`<div id="html_114b395495a2cd381cc9e1299aaafcb5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #ff7043;">UT61</h4>         <p style="margin:2px 0;"><b>Near Galhita on River Hindon,Barnawa,Baghpat</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11794</td></tr>             <tr><td><b>River:</b></td><td style="color:#ff7043;font-weight:bold;">Hindon</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>29.1141, 77.4404</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_1ff8da063843f45bf9c686a4507af7af.setContent(html_114b395495a2cd381cc9e1299aaafcb5);
+            
+        
+
+        marker_de9ef57026f0cc3943dd51cb491ee496.bindPopup(popup_1ff8da063843f45bf9c686a4507af7af)
+        ;
+
+        
+    
+    
+            marker_de9ef57026f0cc3943dd51cb491ee496.bindTooltip(
+                `<div>
+                     UT61 — Hindon (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de9ef57026f0cc3943dd51cb491ee496.setIcon(icon_7377523b829d42ed009d4ec53bb88491);
+            
+    
+            feature_group_861f762c7f2d5e5917dfb57f1279faed.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_c51a11661ce7eba8c2c7266c53cc97c8 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_a098ceca2642a7f453b73060b554f194 = L.marker(
+                [28.860677, 77.795725],
+                {
+}
+            ).addTo(feature_group_c51a11661ce7eba8c2c7266c53cc97c8);
+        
+    
+            var icon_5279ed6032f08089c15cf9fe6add6d25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10b63950be07f2906ecd8bf59dde33e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6152bc4b9819421860122ed0613cd6f5 = $(`<div id="html_6152bc4b9819421860122ed0613cd6f5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #ff5722;">UT58</h4>         <p style="margin:2px 0;"><b>River Kali East, D/s Meerut city, Kaul vill.</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11791</td></tr>             <tr><td><b>River:</b></td><td style="color:#ff5722;font-weight:bold;">Kali East</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>28.8607, 77.7957</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_10b63950be07f2906ecd8bf59dde33e4.setContent(html_6152bc4b9819421860122ed0613cd6f5);
+            
+        
+
+        marker_a098ceca2642a7f453b73060b554f194.bindPopup(popup_10b63950be07f2906ecd8bf59dde33e4)
+        ;
+
+        
+    
+    
+            marker_a098ceca2642a7f453b73060b554f194.bindTooltip(
+                `<div>
+                     UT58 — Kali East (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a098ceca2642a7f453b73060b554f194.setIcon(icon_5279ed6032f08089c15cf9fe6add6d25);
+            
+    
+            var marker_1ca925e5b78c896f480563a5a87902bb = L.marker(
+                [28.397028, 77.863309],
+                {
+}
+            ).addTo(feature_group_c51a11661ce7eba8c2c7266c53cc97c8);
+        
+    
+            var icon_4005e71dd0c7698d6f2b24703289054b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_edd6103096646e6bbf7c93e3c1e99698 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_77cec009c728eca2bcaa9dce114cf47d = $(`<div id="html_77cec009c728eca2bcaa9dce114cf47d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #ff5722;">UT59</h4>         <p style="margin:2px 0;"><b>River Kali East, D/s of Bulandshahr</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11792</td></tr>             <tr><td><b>River:</b></td><td style="color:#ff5722;font-weight:bold;">Kali East</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>28.3970, 77.8633</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_edd6103096646e6bbf7c93e3c1e99698.setContent(html_77cec009c728eca2bcaa9dce114cf47d);
+            
+        
+
+        marker_1ca925e5b78c896f480563a5a87902bb.bindPopup(popup_edd6103096646e6bbf7c93e3c1e99698)
+        ;
+
+        
+    
+    
+            marker_1ca925e5b78c896f480563a5a87902bb.bindTooltip(
+                `<div>
+                     UT59 — Kali East (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ca925e5b78c896f480563a5a87902bb.setIcon(icon_4005e71dd0c7698d6f2b24703289054b);
+            
+    
+            feature_group_c51a11661ce7eba8c2c7266c53cc97c8.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_f90a6cf73746e7c926c8016db7ec1e20 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_e0d2268dd5a708bb298f2a443d5ceda1 = L.marker(
+                [27.44357, 77.71386],
+                {
+}
+            ).addTo(feature_group_f90a6cf73746e7c926c8016db7ec1e20);
+        
+    
+            var icon_f7bed7c7231eed86019a2e39e7f8f82e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2ce8e2946e411a01caede4ec73941d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_63517287071cf91663577269cd6f2259 = $(`<div id="html_63517287071cf91663577269cd6f2259" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #e53935;">UT60</h4>         <p style="margin:2px 0;"><b>Upstream of Gokul Barrage,D/s of Mathura city</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11793</td></tr>             <tr><td><b>River:</b></td><td style="color:#e53935;font-weight:bold;">Yamuna</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>27.4436, 77.7139</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_d2ce8e2946e411a01caede4ec73941d4.setContent(html_63517287071cf91663577269cd6f2259);
+            
+        
+
+        marker_e0d2268dd5a708bb298f2a443d5ceda1.bindPopup(popup_d2ce8e2946e411a01caede4ec73941d4)
+        ;
+
+        
+    
+    
+            marker_e0d2268dd5a708bb298f2a443d5ceda1.bindTooltip(
+                `<div>
+                     UT60 — Yamuna (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e0d2268dd5a708bb298f2a443d5ceda1.setIcon(icon_f7bed7c7231eed86019a2e39e7f8f82e);
+            
+    
+            var marker_6b995030c1f91eac50c20a0ec6f86496 = L.marker(
+                [25.42967, 81.86069],
+                {
+}
+            ).addTo(feature_group_f90a6cf73746e7c926c8016db7ec1e20);
+        
+    
+            var icon_e37fe4e3290b78c03b0ff7a66c61088b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_76ccbf822206e3bea83beed854598c4b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1fd1e19471c0d18c180277dad2f5df3d = $(`<div id="html_1fd1e19471c0d18c180277dad2f5df3d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #e53935;">UT63</h4>         <p style="margin:2px 0;"><b>River Yamuna, U/s to Sangam at Allahabad</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11795</td></tr>             <tr><td><b>River:</b></td><td style="color:#e53935;font-weight:bold;">Yamuna</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.4297, 81.8607</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_76ccbf822206e3bea83beed854598c4b.setContent(html_1fd1e19471c0d18c180277dad2f5df3d);
+            
+        
+
+        marker_6b995030c1f91eac50c20a0ec6f86496.bindPopup(popup_76ccbf822206e3bea83beed854598c4b)
+        ;
+
+        
+    
+    
+            marker_6b995030c1f91eac50c20a0ec6f86496.bindTooltip(
+                `<div>
+                     UT63 — Yamuna (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b995030c1f91eac50c20a0ec6f86496.setIcon(icon_e37fe4e3290b78c03b0ff7a66c61088b);
+            
+    
+            feature_group_f90a6cf73746e7c926c8016db7ec1e20.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_fd05bd0f8a81deaf7aa7875c85861fcb = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_201e40e49acddf0ae8f714e259450aad = L.marker(
+                [25.920256, 82.027409],
+                {
+}
+            ).addTo(feature_group_fd05bd0f8a81deaf7aa7875c85861fcb);
+        
+    
+            var icon_c19ab40e744c7f607350db64833e8acc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_63eb2ca47287c328dcd9a0142830376f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_371f29369318ef142f94a054dff7c06a = $(`<div id="html_371f29369318ef142f94a054dff7c06a" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #795548;">UT67</h4>         <p style="margin:2px 0;"><b>Kheerveer Bridge,Kishundaspur Road,Pratapgarh</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11799</td></tr>             <tr><td><b>River:</b></td><td style="color:#795548;font-weight:bold;">Sai/Ganga tributary</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>25.9203, 82.0274</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_63eb2ca47287c328dcd9a0142830376f.setContent(html_371f29369318ef142f94a054dff7c06a);
+            
+        
+
+        marker_201e40e49acddf0ae8f714e259450aad.bindPopup(popup_63eb2ca47287c328dcd9a0142830376f)
+        ;
+
+        
+    
+    
+            marker_201e40e49acddf0ae8f714e259450aad.bindTooltip(
+                `<div>
+                     UT67 — Sai/Ganga tributary (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_201e40e49acddf0ae8f714e259450aad.setIcon(icon_c19ab40e744c7f607350db64833e8acc);
+            
+    
+            feature_group_fd05bd0f8a81deaf7aa7875c85861fcb.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_3504ca70d7172c73a8891bd1cb19a881 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_eccfdbb9fc72c7031635a8f5709babd2 = L.marker(
+                [26.40877, 79.4914],
+                {
+}
+            ).addTo(feature_group_3504ca70d7172c73a8891bd1cb19a881);
+        
+    
+            var icon_6595ef4a1648da186788d710096f9bce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b279ffa184082b3f0f4a087870cfdf72 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a458fecb021fb03a63c4ffa63f8af021 = $(`<div id="html_a458fecb021fb03a63c4ffa63f8af021" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #d32f2f;">UT69</h4>         <p style="margin:2px 0;"><b>Marhapur, Auraiya</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11801</td></tr>             <tr><td><b>River:</b></td><td style="color:#d32f2f;font-weight:bold;">Yamuna/Ganga tributaries</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>26.4088, 79.4914</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_b279ffa184082b3f0f4a087870cfdf72.setContent(html_a458fecb021fb03a63c4ffa63f8af021);
+            
+        
+
+        marker_eccfdbb9fc72c7031635a8f5709babd2.bindPopup(popup_b279ffa184082b3f0f4a087870cfdf72)
+        ;
+
+        
+    
+    
+            marker_eccfdbb9fc72c7031635a8f5709babd2.bindTooltip(
+                `<div>
+                     UT69 — Yamuna/Ganga tributaries (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eccfdbb9fc72c7031635a8f5709babd2.setIcon(icon_6595ef4a1648da186788d710096f9bce);
+            
+    
+            feature_group_3504ca70d7172c73a8891bd1cb19a881.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_5832d54e7ba20f4aa5498068fa37e0a2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_46d564eae6f61754b1a629769284c768 = L.marker(
+                [28.029453, 79.494042],
+                {
+}
+            ).addTo(feature_group_5832d54e7ba20f4aa5498068fa37e0a2);
+        
+    
+            var icon_d91284e51be8a055524c05f4359495b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be2f3a959c88bac5c2c56e9f87ca0083 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4119683e91070810f9014b6cf6d057d8 = $(`<div id="html_4119683e91070810f9014b6cf6d057d8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #ff6f00;">UT71</h4>         <p style="margin:2px 0;"><b>Beladandi Bridge on River Ramganga</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11803</td></tr>             <tr><td><b>River:</b></td><td style="color:#ff6f00;font-weight:bold;">Ramganga</td></tr>             <tr><td><b>State:</b></td><td>Uttar Pradesh</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>28.0295, 79.4940</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_be2f3a959c88bac5c2c56e9f87ca0083.setContent(html_4119683e91070810f9014b6cf6d057d8);
+            
+        
+
+        marker_46d564eae6f61754b1a629769284c768.bindPopup(popup_be2f3a959c88bac5c2c56e9f87ca0083)
+        ;
+
+        
+    
+    
+            marker_46d564eae6f61754b1a629769284c768.bindTooltip(
+                `<div>
+                     UT71 — Ramganga (Uttar Pradesh)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_46d564eae6f61754b1a629769284c768.setIcon(icon_d91284e51be8a055524c05f4359495b7);
+            
+    
+            feature_group_5832d54e7ba20f4aa5498068fa37e0a2.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_8ca2f4b789ba6d050e21dc6187825acd = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_0eb8fa381af58d980643f773e9a0b810 = L.marker(
+                [23.396, 88.3626],
+                {
+}
+            ).addTo(feature_group_8ca2f4b789ba6d050e21dc6187825acd);
+        
+    
+            var icon_bf129b6d0744f5f7839f36e4c4bc9eb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_013f4bafda200df1239f8e1225ee3dd7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4665a1f411f38f8c1801e81f0bc12d7f = $(`<div id="html_4665a1f411f38f8c1801e81f0bc12d7f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #1565c0;">WB87</h4>         <p style="margin:2px 0;"><b>Nabadwip Bathing Ghat</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11816</td></tr>             <tr><td><b>River:</b></td><td style="color:#1565c0;font-weight:bold;">Ganga (Hooghly)</td></tr>             <tr><td><b>State:</b></td><td>West Bengal</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>23.3960, 88.3626</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_013f4bafda200df1239f8e1225ee3dd7.setContent(html_4665a1f411f38f8c1801e81f0bc12d7f);
+            
+        
+
+        marker_0eb8fa381af58d980643f773e9a0b810.bindPopup(popup_013f4bafda200df1239f8e1225ee3dd7)
+        ;
+
+        
+    
+    
+            marker_0eb8fa381af58d980643f773e9a0b810.bindTooltip(
+                `<div>
+                     WB87 — Ganga (Hooghly) (West Bengal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0eb8fa381af58d980643f773e9a0b810.setIcon(icon_bf129b6d0744f5f7839f36e4c4bc9eb5);
+            
+    
+            feature_group_8ca2f4b789ba6d050e21dc6187825acd.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_37d8fdcca98a34ff5d6af9140a48b650 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_fb74a8c5617d9e44d1f110664c6fca41 = L.marker(
+                [22.9068, 88.4039],
+                {
+}
+            ).addTo(feature_group_37d8fdcca98a34ff5d6af9140a48b650);
+        
+    
+            var icon_255d4deb0288ed9961ee09069efc1e61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8d29be84dcda04f51a6940fb30d784f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6b1b743d5d9dc9ab552d93d8be72b286 = $(`<div id="html_6b1b743d5d9dc9ab552d93d8be72b286" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; min-width: 250px;">         <h4 style="margin:0; color: #9e9e9e;">WB88</h4>         <p style="margin:2px 0;"><b>Chinsura , Near Hooghly, Road Bridge</b></p>         <table style="font-size:12px;">             <tr><td><b>Station ID:</b></td><td>11817</td></tr>             <tr><td><b>River:</b></td><td style="color:#9e9e9e;font-weight:bold;">Hooghly</td></tr>             <tr><td><b>State:</b></td><td>West Bengal</td></tr>             <tr><td><b>Lat/Lon:</b></td><td>22.9068, 88.4039</td></tr>             <tr><td><b>In Training:</b></td><td>✅ Yes</td></tr>         </table>     </div>     </div>`)[0];
+                popup_d8d29be84dcda04f51a6940fb30d784f.setContent(html_6b1b743d5d9dc9ab552d93d8be72b286);
+            
+        
+
+        marker_fb74a8c5617d9e44d1f110664c6fca41.bindPopup(popup_d8d29be84dcda04f51a6940fb30d784f)
+        ;
+
+        
+    
+    
+            marker_fb74a8c5617d9e44d1f110664c6fca41.bindTooltip(
+                `<div>
+                     WB88 — Hooghly (West Bengal)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb74a8c5617d9e44d1f110664c6fca41.setIcon(icon_255d4deb0288ed9961ee09069efc1e61);
+            
+    
+            feature_group_37d8fdcca98a34ff5d6af9140a48b650.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_71da3e0780808ef2b10d05709efc690b = L.circleMarker(
+                [28.685751, 77.392687],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_e4dd8bed5adc3ca09a482b552912ba95 = L.circleMarker(
+                [28.860677, 77.795725],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_13bc5a83a30e884e46aefb9f6f51e4a5 = L.circleMarker(
+                [28.397028, 77.863309],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_2208b0bc0156a859901a12f6633bc954 = L.circleMarker(
+                [27.44357, 77.71386],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_d498b93d4a912abf1cfe803535c0aafd = L.circleMarker(
+                [29.114116, 77.44042],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_8ecedd6541259aed04cca95969de8a29 = L.circleMarker(
+                [28.90421, 79.011582],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_9b21b4ac1233744f3a694d9e5a8d00de = L.circleMarker(
+                [25.42967, 81.86069],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_dc8a7d0042b65d5d328937eadf0756df = L.circleMarker(
+                [25.504818, 81.866305],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_f45140b9f5576b9084fe14dfcd6e8fde = L.circleMarker(
+                [25.1316, 82.8784],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_7f381e2cc0f01f888bf9083862ddea76 = L.circleMarker(
+                [25.5868, 83.60569],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_8c1867cdd8032983eb485702db711c00 = L.circleMarker(
+                [25.920256, 82.027409],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_46cdfa3a93a3b96bbfe93f009112e281 = L.circleMarker(
+                [25.78, 80.5778],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_f37fe97004bed461fc923ef11af378d1 = L.circleMarker(
+                [26.40877, 79.4914],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_09d57345111e37a71aef93cc106682eb = L.circleMarker(
+                [25.91217, 80.28931],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_8256969a4b3df13d9b38d077cf537c6f = L.circleMarker(
+                [28.029453, 79.494042],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_4b6baa450adac06bc600df9c9c758f20 = L.circleMarker(
+                [23.6771, 86.7425],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_f8bc56e5ffa5d6b93b024d9147ebde2e = L.circleMarker(
+                [24.801, 87.922],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_462773d48edb2e0096ab7062077492a4 = L.circleMarker(
+                [23.396, 88.3626],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_e36aa8cfe162323b93611bafb88289b9 = L.circleMarker(
+                [22.9068, 88.4039],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_f3c4a42c8f91e4836bbc42f8a7157cba = L.circleMarker(
+                [23.4801, 87.3049],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            var circle_marker_a5fed83293251567142fe14d19cd3230 = L.circleMarker(
+                [23.645699, 85.527719],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 2}
+            ).addTo(feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4);
+        
+    
+            feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var feature_group_4b5b199cbcb53662bb84c4c526f02224 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_b4a298d719087631dc55c2bc0f965989 = L.circleMarker(
+                [25.5193, 83.9007],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_80b28eb0560a0135921fd010afa55748 = L.circleMarker(
+                [25.8232, 84.5858],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_e502e1ec8050d03cc5cde552482a876f = L.circleMarker(
+                [25.5918, 83.9861],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_28403fa1f12e34956516ad5b759b7150 = L.circleMarker(
+                [25.30783, 87.016618],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_d0cd6f11446ee49595f9951e0c2ce4b9 = L.circleMarker(
+                [25.51046, 85.30732],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_ba01a241df665acf4bde24004beda5a9 = L.circleMarker(
+                [25.6533, 85.0952],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_c573399bfbbab674ef3e36ea8b91b6ec = L.circleMarker(
+                [25.501, 86.4812],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_cf41aa8cde6133724f5e289114de359f = L.circleMarker(
+                [25.4238, 87.2336],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_bc722c001148f9e2b234d1f6145e2805 = L.circleMarker(
+                [25.5672, 84.7961],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_e874fcc16a54db5200bd54bcb1b26a74 = L.circleMarker(
+                [25.6997, 85.1937],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_f21c89925522b390011e4ffac09bd6a6 = L.circleMarker(
+                [28.989211, 77.202686],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_f1630a27e0cc2beb816a67045fa908cd = L.circleMarker(
+                [23.667, 86.411],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_ab1a5edbb3623180cb26292a554bfaad = L.circleMarker(
+                [25.2489, 87.6417],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_6cc2048c5d611fcf604cad517ef44462 = L.circleMarker(
+                [25.0546, 87.8381],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_d8e3e25cc0a661b2fd14e9657109721c = L.circleMarker(
+                [30.274, 78.9607],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_6fb5128d77af2968def826a6a29bf310 = L.circleMarker(
+                [30.214, 78.7464],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_f115fa5d7991eb71272824d5699dcfbe = L.circleMarker(
+                [30.367, 78.4794],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_65dc846a631e94f5b14ab7dfc44fbcbd = L.circleMarker(
+                [30.07361, 78.2903],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            var circle_marker_8893194d1289edb039fbfb7231374b54 = L.circleMarker(
+                [29.94153, 78.15757],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4b5b199cbcb53662bb84c4c526f02224);
+        
+    
+            feature_group_4b5b199cbcb53662bb84c4c526f02224.addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            var poly_line_cb968793894ce3c97a5e26ce0352461f = L.polyline(
+                [[30.99, 78.94], [30.37, 78.48], [30.27, 78.96], [30.07, 78.29], [29.94, 78.16], [29.11, 77.44], [27.44, 77.71], [26.41, 79.49], [25.78, 80.58], [25.43, 81.86], [25.13, 82.88], [25.59, 83.61], [25.52, 83.9], [25.65, 85.1], [25.31, 87.02], [24.8, 87.92], [23.48, 87.3], [23.4, 88.36], [22.91, 88.4]],
+                {"bubblingMouseEvents": true, "color": "#1a73e8", "dashArray": "10", "dashOffset": null, "fill": false, "fillColor": "#1a73e8", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+        
+    
+            poly_line_cb968793894ce3c97a5e26ce0352461f.bindTooltip(
+                `<div>
+                     Ganga River (approximate)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_ec210efe13a68bbd518d3d813cab2c42_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_67ba0c9c9f92b42e7558478bb66450a3,
+                    "Light" : tile_layer_28fa7ffaf54f958fc4b4d861e32db471,
+                    "Satellite" : tile_layer_071aef1def78da2550001ec0cfefb02b,
+                },
+                overlays :  {
+                    "\ud83c\udf0a Ganga" : feature_group_2caf83dafe11e1dce6b1fceeb6ae4b48,
+                    "\ud83c\udf0a Ghagra" : feature_group_b271999064cc91ea4cc9ed4e007905ee,
+                    "\ud83c\udf0a Punpun" : feature_group_b9ea11ef7cd1f2e4043ee889db714e54,
+                    "\ud83c\udf0a Gandak" : feature_group_fba7858b17924002434a5ee2d93aa4fe,
+                    "\ud83c\udf0a Kosi" : feature_group_49d3ad9a97eebf0af3aeac965b08f062,
+                    "\ud83c\udf0a Son" : feature_group_f08be3865f9e4c6384d36bcacbe9251b,
+                    "\ud83c\udf0a Yamuna/Western drain" : feature_group_3f0ea18ba2cd687d932e1cba06e3e95e,
+                    "\ud83c\udf0a Damodar" : feature_group_5ec3133bb3356b7b7741cae836ac3788,
+                    "\ud83c\udf0a Ganga (Alaknanda)" : feature_group_fbc91ece905da37d51657cc886aae295,
+                    "\ud83c\udf0a Ganga (Bhagirathi)" : feature_group_e4b57287b5bc9895d905fed6cefc724f,
+                    "\ud83c\udf0a Hindon" : feature_group_861f762c7f2d5e5917dfb57f1279faed,
+                    "\ud83c\udf0a Kali East" : feature_group_c51a11661ce7eba8c2c7266c53cc97c8,
+                    "\ud83c\udf0a Yamuna" : feature_group_f90a6cf73746e7c926c8016db7ec1e20,
+                    "\ud83c\udf0a Sai/Ganga tributary" : feature_group_fd05bd0f8a81deaf7aa7875c85861fcb,
+                    "\ud83c\udf0a Yamuna/Ganga tributaries" : feature_group_3504ca70d7172c73a8891bd1cb19a881,
+                    "\ud83c\udf0a Ramganga" : feature_group_5832d54e7ba20f4aa5498068fa37e0a2,
+                    "\ud83c\udf0a Ganga (Hooghly)" : feature_group_8ca2f4b789ba6d050e21dc6187825acd,
+                    "\ud83c\udf0a Hooghly" : feature_group_37d8fdcca98a34ff5d6af9140a48b650,
+                    "\u2705 In Training Dataset" : feature_group_cdd5b1de3ae7af7ecb06bc9707a175c4,
+                    "\u274c Not in Training" : feature_group_4b5b199cbcb53662bb84c4c526f02224,
+                },
+            };
+            let layer_control_ec210efe13a68bbd518d3d813cab2c42 = L.control.layers(
+                layer_control_ec210efe13a68bbd518d3d813cab2c42_layers.base_layers,
+                layer_control_ec210efe13a68bbd518d3d813cab2c42_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_d97dfa1aad3878256164d9b920bd08b6);
+
+        
+    
+            var tile_layer_8a14dcc566e6413a5704cf7cdfa7d910 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_fba479e90c0445b6902a3b34280895a0 = new L.Control.MiniMap(
+                tile_layer_8a14dcc566e6413a5704cf7cdfa7d910,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_d97dfa1aad3878256164d9b920bd08b6.addControl(mini_map_fba479e90c0445b6902a3b34280895a0);
+        
+</script>
+</html>

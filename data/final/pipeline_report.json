@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-04-27T15:21:49.592681",
+  "sources": {
+    "cpcb": 36600,
+    "data_gov_in": 138072,
+    "nwmp_pdf": 732
+  },
+  "parameters": {
+    "bod": 10952,
+    "cod": 6322,
+    "chloride": 12810,
+    "conductivity": 12962,
+    "do": 9849,
+    "nitrate": 8417,
+    "toc": 3690,
+    "temperature": 11782,
+    "turbidity": 5123,
+    "ph": 14045,
+    "fecal_coliform": 2049,
+    "fluoride": 6122,
+    "total_coliform": 1621,
+    "hardness": 9676,
+    "potassium": 9321,
+    "calcium": 9387,
+    "iron": 4709,
+    "magnesium": 9390,
+    "sodium": 8982,
+    "sulphate": 8843,
+    "tds": 4473,
+    "ammonia": 4543,
+    "arsenic": 222,
+    "tss": 114
+  },
+  "total_records_long": 175404,
+  "total_rows_wide": 14288,
+  "output_files": {
+    "wide": "C:\\Users\\VHK6FSM\\Personal\\Dissertation\\Ganga_Google_Earth\\data\\final\\ganga_water_quality_final.csv",
+    "long": "C:\\Users\\VHK6FSM\\Personal\\Dissertation\\Ganga_Google_Earth\\data\\final\\ganga_water_quality_long.csv"
+  }
+}

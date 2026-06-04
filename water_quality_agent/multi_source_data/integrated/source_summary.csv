@@ -1,0 +1,5 @@
+Source,Rows,Stations,Year_Min,Year_Max,Parameters_With_Data
+cpcb_realtime,75801,37,2025,2025,10
+datagov,10700,444,1963,2021,12
+nwdp_cpcb,5849,108,2018,2021,3
+nwmp_html,155,65,2012,2014,8

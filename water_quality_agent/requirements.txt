@@ -1,0 +1,29 @@
+# Water Quality Data Integration Agent — Dependencies
+
+# Core
+pandas>=2.0
+numpy>=1.24
+requests>=2.28
+
+# Excel file support (for CWC data)
+openpyxl>=3.1
+
+# Date parsing fallback
+python-dateutil>=2.8
+
+# Web scraping (for CPCB portal)
+beautifulsoup4>=4.12
+
+# PDF table extraction (for CPCB ENVIS reports)
+pdfplumber>=0.9
+
+# LLM agents (optional — only needed with --use-llm)
+# API mode (lightweight, recommended):
+huggingface-hub>=0.20
+
+# Local inference mode (needs GPU or large RAM):
+# transformers>=4.36
+# torch>=2.0
+
+# Kaggle downloads (optional — needs Kaggle account):
+# kaggle>=1.5

@@ -1,0 +1,41 @@
+station_id,station_no,station_name,latitude,longitude,state,site_name,catchment,status_remark
+11819,BH72,"BH72_River Ganga at Chausa, U/s of Buxar ",25.5193,83.9007,Bihar,DSP SWAN,---,SDGAN-308
+11804,BH73,"BH73_Bridge on Ghagra near Manjhi, Chappra",25.8232,84.5858,Bihar,DSP SWAN,---,SDGAN-328
+11805,BH74,"BH74_Road bridge on River Ganga, D/s of Buxar",25.5918,83.9861,Bihar,DSP SWAN,---,SDGAN-309
+11822,BH75,"BH75_D/s of Bhagalpur, Road Bridge on River Ganga",25.30783,87.016618,Bihar,DSP SWAN,---,SDGAN-299
+11806,BH76,"BH76_Road bridge at Fathua on Punpun, Patna",25.51046,85.30732,Bihar,DSP SWAN,---,SDGAN-302
+11807,BH77,"BH77_New Bridge, U/s of Patna city, Khurji",25.6533,85.0952,Bihar,DSP SWAN,---,SDGAN-256
+11808,BH78,"BH78_Road bridge on Burhi Gandak, Khagaria",25.501,86.4812,Bihar,DSP SWAN,---,SDGAN-320
+11809,BH79,"BH79_Road bridge on Kosi, Kursela",25.4238,87.2336,Bihar,DSP SWAN,---,SDGAN-313
+11810,BH80,"BH80_Road bridge on Son, Arrah",25.5672,84.7961,Bihar,DSP SWAN,---,SDGAN-333
+11811,BH81,"BH81_Road Bridge on Gandak, Hajipur",25.6997,85.1937,Bihar,DSP SWAN,---,SDGAN-295
+11789,HR56,"HR56_D/s of Mohana, Sonipat",28.989211,77.202686,Haryana,DSP SWAN,---,SDGAN-331
+11812,JH82,"JH82_Birsa Pool, Damodar River Bank,Pathardih",23.667,86.411,Jharkhand,DSP SWAN,---,SDGAN-335
+11813,JH83,JH83_Sahebganj,25.2489,87.6417,Jharkhand,DSP SWAN,---,SDGAN-322
+11820,JH84,JH84_Rajmahal at Malgodam,25.0546,87.8381,Jharkhand,DSP SWAN,---,SDGAN-311
+11785,UK51,"UK51_Abandoned old  bridge, Rudraprayag ",30.274,78.9607,Uttarakhand,DSP SWAN,---,SDGAN-71
+11821,UK52,"UK52_D/s of Srinagar, Kirtinagar",30.214,78.7464,Uttarakhand,DSP SWAN,---,SDGAN-315
+11786,UK53,UK53_D/s of Tehri Dam,30.367,78.4794,Uttarakhand,DSP SWAN,---,SDGAN-317
+11787,UK54,"UK54_Distributing Canal, Left Bank, Rishikesh",30.07361,78.2903,Uttarakhand,DSP SWAN,---,SDGAN-263
+11788,UK55,"UK55_D/s of Har Ki Pauri, Dam Kothi, Haridwar",29.94153,78.15757,Uttarakhand,DSP SWAN,---,SDGAN-290
+11790,UT57,"UT57_Bridge on Hindon river, Rajnagar Ext.Gzb",28.685751,77.392687,Uttar Pradesh,DSP SWAN,---,SDGAN-79
+11791,UT58,"UT58_River Kali East, D/s Meerut city, Kaul vill.",28.860677,77.795725,Uttar Pradesh,DSP SWAN,---,05072022
+11792,UT59,"UT59_River Kali East, D/s of Bulandshahr",28.397028,77.863309,Uttar Pradesh,DSP SWAN,---,UT-59-07072022
+11793,UT60,"UT60_Upstream of Gokul Barrage,D/s of Mathura city",27.44357,77.71386,Uttar Pradesh,DSP SWAN,---,SDGAN-318
+11794,UT61,"UT61_Near Galhita on River Hindon,Barnawa,Baghpat",29.114116,77.44042,Uttar Pradesh,DSP SWAN,---,SDGAN-310
+11818,UT62,"UT62_River Kosi, D/s of Kashipur, Darhiyal",28.90421,79.011582,Uttar Pradesh,DSP SWAN,---,SDGAN-324
+11795,UT63,"UT63_River Yamuna, U/s to Sangam at Allahabad",25.42967,81.86069,Uttar Pradesh,DSP SWAN,---,SDGAN-294
+11796,UT64,"UT64_Fafamau, Lord Curzon Bridge, Allahabad",25.504818,81.866305,Uttar Pradesh,DSP SWAN,---,SDGAN-292
+11797,UT65,"UT65_Balu ghat bridge, Chunar",25.1316,82.8784,Uttar Pradesh,DSP SWAN,---,SDGAN-316
+11798,UT66,"UT66_Ghazipur, Abdul Hameed Setu on River Ganga",25.5868,83.60569,Uttar Pradesh,DSP SWAN,---,SDGAN-323
+11799,UT67,"UT67_Kheerveer Bridge,Kishundaspur Road,Pratapgarh",25.920256,82.027409,Uttar Pradesh,DSP SWAN,---,SDGAN-301
+11800,UT68,"UT68_Korra Kanak, Asothar, Fatehpur.",25.78,80.5778,Uttar Pradesh,DSP SWAN,---,SDGAN-319
+11801,UT69,"UT69_Marhapur, Auraiya",26.40877,79.4914,Uttar Pradesh,DSP SWAN,---,SDGAN-304
+11802,UT70,"UT70_Mawai Dham, Amauli, Fatehpur",25.91217,80.28931,Uttar Pradesh,DSP SWAN,---,SDGAN-307
+11803,UT71,UT71_Beladandi Bridge on River Ramganga,28.029453,79.494042,Uttar Pradesh,DSP SWAN,---,SDGAN-312
+11814,WB85,WB85_Raghunathpur Thermal power plant Intake well.,23.6771,86.7425,West Bengal,DSP SWAN,---,SDGAN-297
+11815,WB86,"WB86_Farakka Barrage, Road Bridge",24.801,87.922,West Bengal,DSP SWAN,---,SDGAN-314
+11816,WB87,WB87_Nabadwip Bathing Ghat,23.396,88.3626,West Bengal,DSP SWAN,---,SDGAN-296
+11817,WB88,"WB88_Chinsura , Near Hooghly, Road Bridge",22.9068,88.4039,West Bengal,DSP SWAN,---,SDGAN-293
+11783,WB89,"WB89_Durgapur barrage, Road Bridge",23.4801,87.3049,West Bengal,DSP SWAN,---,SDGAN-303
+11784,WB90,WB90_Damodar river Intake well pump house Ramgarh,23.645699,85.527719,West Bengal,DSP SWAN,---,SDGNA-332
